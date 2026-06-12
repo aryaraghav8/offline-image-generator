@@ -1,0 +1,27 @@
+# Virtual environments
+
+img_env/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Generated images
+outputs/
+
+# Models
+models/
+*.ckpt
+*.safetensors
+
+# Frontend
+frontend/dist/
+frontend/node_modules/
+
+# VS Code
+.vscode/

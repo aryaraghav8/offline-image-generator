@@ -1,0 +1,20 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Award, CheckCircle, Clock, Cpu, HardDrive, RefreshCw, Star, Zap } from 'lucide-react';
+import { MOCK_MODELS } from '@/utils';
+const PERF_CONFIG = {
+    fast: { label: 'Fast', color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20', icon: Zap },
+    balanced: { label: 'Balanced', color: 'text-amber-400 bg-amber-500/10 border-amber-500/20', icon: Star },
+    'high-quality': { label: 'Quality', color: 'text-violet-400 bg-violet-500/10 border-violet-500/20', icon: Award },
+};
+const ModelCard = ({ model }) => {
+    const perf = PERF_CONFIG[model.performance];
+    const PerfIcon = perf.icon;
+    return (_jsx("article", { className: "card-hover rounded-2xl border border-dark-700 bg-dark-800 p-5", children: _jsxs("div", { className: "flex items-start gap-4", children: [_jsx("div", { className: "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-indigo-500/20 bg-indigo-500/10", children: _jsx(Cpu, { size: 22, className: "text-indigo-400" }) }), _jsxs("div", { className: "min-w-0 flex-1", children: [_jsxs("div", { className: "mb-1 flex items-start justify-between gap-2", children: [_jsx("h2", { className: "text-base font-semibold text-white", children: model.displayName }), _jsxs("span", { className: `flex flex-shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium ${perf.color}`, children: [_jsx(PerfIcon, { size: 11 }), perf.label] })] }), _jsx("p", { className: "mb-3 text-sm leading-relaxed text-dark-300", children: model.description }), _jsx("div", { className: "mb-3 flex flex-wrap gap-1.5", children: [model.category, `${model.vram}GB VRAM`, `${model.quality}% quality`].map((tag) => (_jsx("span", { className: "rounded-full border border-dark-700 bg-dark-900 px-2 py-0.5 text-xs text-dark-500", children: tag }, tag))) }), _jsxs("div", { className: "flex items-center gap-4 text-xs text-dark-500", children: [_jsxs("span", { className: "flex items-center gap-1", children: [_jsx(HardDrive, { size: 11 }), model.size] }), model.lastUsed && (_jsxs("span", { className: "flex items-center gap-1", children: [_jsx(Clock, { size: 11 }), model.lastUsed] })), _jsxs("span", { className: "ml-auto flex items-center gap-1 text-emerald-400", children: [_jsx(CheckCircle, { size: 11 }), "Ready"] })] })] })] }) }));
+};
+export const ModelsPage = () => {
+    return (_jsxs("div", { className: "space-y-6 p-4 lg:p-6", children: [_jsxs("div", { className: "flex items-center justify-between", children: [_jsxs("div", { children: [_jsxs("h1", { className: "flex items-center gap-2 text-lg font-bold text-white", children: [_jsx(Cpu, { size: 20, className: "text-violet-400" }), "Models"] }), _jsxs("p", { className: "mt-0.5 text-sm text-dark-500", children: [MOCK_MODELS.length, " installed"] })] }), _jsxs("button", { type: "button", className: "flex items-center gap-2 rounded-xl border border-dark-700 bg-dark-800 px-4 py-2 text-sm font-medium text-dark-300 transition-all hover:border-dark-600 hover:text-white", children: [_jsx(RefreshCw, { size: 14 }), "Refresh"] })] }), _jsx("div", { className: "grid grid-cols-3 gap-3", children: [
+                    { label: 'Ready', count: MOCK_MODELS.length, color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' },
+                    { label: 'Fast', count: MOCK_MODELS.filter((model) => model.performance === 'fast').length, color: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20' },
+                    { label: 'Quality', count: MOCK_MODELS.filter((model) => model.performance === 'high-quality').length, color: 'text-violet-400 bg-violet-500/10 border-violet-500/20' },
+                ].map(({ label, count, color }) => (_jsxs("div", { className: `flex items-center justify-between rounded-xl border p-3 ${color}`, children: [_jsx("span", { className: "text-xs font-medium", children: label }), _jsx("span", { className: "text-lg font-bold", children: count })] }, label))) }), _jsx("div", { className: "grid grid-cols-1 gap-4 md:grid-cols-2", children: MOCK_MODELS.map((model) => (_jsx(ModelCard, { model: model }, model.id))) })] }));
+};

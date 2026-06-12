@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-dark-700;
+}
+
+body {
+  @apply bg-dark-950 text-dark-100;
+}
+
+html.light {
+  @apply bg-white text-dark-900;
+  * {
+    @apply border-dark-200;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-700 rounded hover:bg-dark-600;
+}
+
+/* Selection */
+::selection {
+  @apply bg-blue-600 text-white;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background-position: -1000px 0;
+  background-repeat: repeat-x;
+}
+
+/* Common utilities */
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-lg;
+}
+
+.glass-dark {
+  @apply backdrop-blur-md bg-dark-900/50 border border-dark-700;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-plasma {
+  @apply inline-flex items-center justify-center rounded-lg bg-plasma px-4 py-2 font-medium text-white transition-colors hover:bg-plasma-dark disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-dark-700 text-dark-100 rounded-lg font-medium hover:bg-dark-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-ghost {
+  @apply px-4 py-2 text-dark-100 rounded-lg font-medium hover:bg-dark-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.input-base {
+  @apply px-4 py-2 bg-dark-800 border border-dark-700 rounded-lg text-dark-100 placeholder-dark-500 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600/50 transition-all;
+}
+
+.input-base.light {
+  @apply bg-white border-dark-300 text-dark-900 placeholder-dark-400 focus:border-blue-500 focus:ring-blue-500/50;
+}
+
+.card {
+  @apply bg-dark-800 border border-dark-700 rounded-lg p-4;
+}
+
+.card.light {
+  @apply bg-white border-dark-200;
+}
+
+/* Text utilities */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-heading {
+  @apply text-dark-50;
+}
+
+.text-soft {
+  @apply text-dark-300;
+}
+
+.text-faint {
+  @apply text-dark-400;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-plasma-light to-sky-300 bg-clip-text text-transparent;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-medium;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-indigo-300 via-plasma-light to-cyan-300 bg-clip-text text-transparent;
+}
+
+.sidebar-item-active {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(6, 182, 212, 0.08));
+  box-shadow: inset 0 0 0 1px rgba(129, 140, 248, 0.16);
+}
+
+.card-hover {
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-1px);
+  border-color: #2d3f5c;
+}
+
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1rem;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid {
+    column-count: 4;
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
