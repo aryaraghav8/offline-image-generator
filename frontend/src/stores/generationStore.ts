@@ -47,7 +47,7 @@ interface GenerationStore {
 const DEFAULT_PARAMS = {
   prompt: '',
   negativePrompt: '',
-  model: 'FLUX',
+  model: 'flux',
   width: 768,
   height: 768,
   steps: 20,

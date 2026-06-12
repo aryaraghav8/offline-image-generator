@@ -67,8 +67,8 @@ export function generateImageFilename(prompt: string, timestamp: Date = new Date
 }
 
 export const MODEL_BADGES: Record<string, { label: string; color: string }> = {
-  'FLUX': { label: 'FLUX', color: 'bg-blue-600' },
-  'FLUX_SCHNELL': { label: 'FLUX Schnell', color: 'bg-blue-500' },
+  'flux': { label: 'flux', color: 'bg-blue-600' },
+  'FLUX_SCHNELL': { label: 'flux Schnell', color: 'bg-blue-500' },
   'SDXL': { label: 'SDXL', color: 'bg-purple-600' },
   'SD_1_5': { label: 'SD 1.5', color: 'bg-purple-500' },
   'REALISTIC_VISION': { label: 'Realistic Vision', color: 'bg-indigo-600' },
@@ -148,9 +148,9 @@ export const MOCK_STATS = {
 
 export const MOCK_MODELS: Model[] = [
   {
-    id: 'FLUX',
-    name: 'flux-dev',
-    displayName: 'FLUX Dev',
+    id: 'flux',
+    name: 'Flux-dev',
+    displayName: 'Flux Dev',
     description: 'State-of-the-art text-to-image model with excellent prompt adherence and photorealism.',
     category: 'text-to-image',
     performance: 'high-quality',
@@ -164,8 +164,8 @@ export const MOCK_MODELS: Model[] = [
   {
     id: 'FLUX_SCHNELL',
     name: 'flux-schnell',
-    displayName: 'FLUX Schnell',
-    description: 'Fast FLUX variant optimized for rapid iteration with strong visual quality.',
+    displayName: 'flux Schnell',
+    description: 'Fast flux variant optimized for rapid iteration with strong visual quality.',
     category: 'text-to-image',
     performance: 'fast',
     size: '23.8 GB',
@@ -222,7 +222,7 @@ export const MOCK_MODELS: Model[] = [
 const demoParams = {
   prompt: '',
   negativePrompt: '',
-  model: 'FLUX',
+  model: 'flux',
   width: 768,
   height: 768,
   steps: 20,
@@ -236,7 +236,7 @@ export const MOCK_IMAGES: GeneratedImage[] = [
     id: 'img-aurora-city',
     url: 'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80',
     prompt: 'Aurora lights over a glass city at midnight',
-    model: 'FLUX',
+    model: 'flux',
     params: { ...demoParams, prompt: 'Aurora lights over a glass city at midnight' },
     createdAt: new Date(Date.now() - 1000 * 60 * 35).toISOString(),
     generationTime: 5.9,

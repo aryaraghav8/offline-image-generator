@@ -1,4 +1,4 @@
-export type ModelType = 'FLUX' | 'FLUX_SCHNELL' | 'SDXL' | 'SD_1_5' | 'REALISTIC_VISION' | 'CUSTOM';
+export type ModelType = 'flux' | 'FLUX_SCHNELL' | 'SDXL' | 'SD_1_5' | 'REALISTIC_VISION' | 'CUSTOM';
 
 export interface Model {
   id: string;

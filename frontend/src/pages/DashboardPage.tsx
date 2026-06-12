@@ -117,8 +117,8 @@ export const DashboardPage = () => {
           </div>
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
             {[
-              { name: 'FLUX Schnell', desc: 'Fast, high quality' },
-              { name: 'FLUX', desc: 'Flagship model' },
+              { name: 'flux Schnell', desc: 'Fast, high quality' },
+              { name: 'flux', desc: 'Flagship model' },
               { name: 'Stable Diffusion XL', desc: 'Versatile and artistic' },
             ].map((model) => (
               <div key={model.name} className="card flex items-center gap-3 p-4">

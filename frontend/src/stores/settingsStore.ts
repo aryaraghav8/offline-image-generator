@@ -15,7 +15,7 @@ interface SettingsStore extends AppSettings {
 const DEFAULT_SETTINGS: AppSettings = {
   theme: 'dark',
   gridSize: 'md',
-  defaultModel: 'FLUX',
+  defaultModel: 'flux',
   defaultWidth: 768,
   defaultHeight: 768,
   defaultSteps: 20,

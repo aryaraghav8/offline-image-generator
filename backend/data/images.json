@@ -1,0 +1,128 @@
+[
+  {
+    "id": "20260612_135536",
+    "url": "http://localhost:8000/outputs/generated_20260612_135536.png",
+    "prompt": "A futuristic city at sunset",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "A futuristic city at sunset",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T13:55:36.702038",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_143921",
+    "url": "http://localhost:8000/outputs/generated_20260612_143921.png",
+    "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T14:39:21.225087",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_144318",
+    "url": "http://localhost:8000/outputs/generated_20260612_144318.png",
+    "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+      "negativePrompt": "",
+      "model": "abd",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T14:43:18.030977",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_150707",
+    "url": "http://localhost:8000/outputs/generated_20260612_150707.png",
+    "prompt": "boad",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "boad",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T15:07:07.221868",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_150919",
+    "url": "http://localhost:8000/outputs/generated_20260612_150919.png",
+    "prompt": "boad",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "boad",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T15:09:19.014623",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_150930",
+    "url": "http://localhost:8000/outputs/generated_20260612_150930.png",
+    "prompt": "boat",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "boat",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T15:09:30.315466",
+    "generationTime": 0,
+    "isFavorite": false
+  }
+]

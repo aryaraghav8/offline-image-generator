@@ -8,6 +8,12 @@ import type {
   ErrorResponse,
 } from '@/types';
 
+interface GenerateResponse {
+  success: boolean;
+  imageUrl: string;
+  error?: string;
+}
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 class APIClient {
@@ -50,8 +56,21 @@ class APIClient {
   }
 
   // Generation
-  async generateImage(params: GenerationParams): Promise<Generation> {
-    const response = await this.client.post<Generation>('/generate', params);
+  async generateImage(
+    params: GenerationParams
+  ): Promise<GenerateResponse> {
+
+    const response =
+      await this.client.post<GenerateResponse>(
+        '/generate',
+        params
+      );
+
+    return response.data;
+  }
+
+  async getImages(): Promise<GeneratedImage[]> {
+    const response = await this.client.get<GeneratedImage[]>('/images');
     return response.data;
   }
 
