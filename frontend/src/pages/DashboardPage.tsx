@@ -1,11 +1,7 @@
-import type { LucideIcon } from 'lucide-react';
 import {
   ArrowRight,
-  Clock,
   Cpu,
-  Images,
   Sparkles,
-  Star,
   TrendingUp,
   Zap,
 } from 'lucide-react';
@@ -14,27 +10,6 @@ import { ImageCard } from '@/components/gallery/ImageCard';
 import { useAppStore } from '@/stores/appStore';
 import { useGenerationStore } from '@/stores/generationStore';
 import { MOCK_IMAGES, MOCK_STATS } from '@/utils';
-
-interface StatCardProps {
-  icon: LucideIcon;
-  label: string;
-  value: string | number;
-  sub?: string;
-  accent?: boolean;
-}
-
-const StatCard = ({ icon: Icon, label, value, sub, accent = false }: StatCardProps) => (
-  <div className={`card flex items-center gap-4 p-5 ${accent ? 'border-plasma/40 bg-plasma/5' : ''}`}>
-    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${accent ? 'bg-plasma/20' : 'bg-dark-700'}`}>
-      <Icon size={20} className={accent ? 'text-plasma-light' : 'text-soft'} />
-    </div>
-    <div>
-      <p className="text-2xl font-bold text-heading">{value}</p>
-      <p className="text-xs text-faint">{label}</p>
-      {sub && <p className="mt-0.5 text-[10px] text-success">{sub}</p>}
-    </div>
-  </div>
-);
 
 export const DashboardPage = () => {
   const navigate = useNavigate();
@@ -55,7 +30,7 @@ export const DashboardPage = () => {
                 <span className="text-xs font-medium text-success">All systems ready</span>
               </div>
               <h1 className="mb-1 text-2xl font-bold text-heading">
-                Create something <span className="text-gradient">extraordinary</span>
+                Create something <span className="text-gradient">extraordnary</span>
               </h1>
               <p className="text-sm text-soft">Your AI image studio is ready. What will you generate today?</p>
             </div>
@@ -67,12 +42,12 @@ export const DashboardPage = () => {
           </div>
         </section>
 
-        <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {/* <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           <StatCard icon={Images} label="Total generated" value={MOCK_STATS.totalGenerated.toLocaleString()} sub="+34 today" accent />
           <StatCard icon={Sparkles} label="Models available" value={MOCK_STATS.modelsAvailable} />
           <StatCard icon={Star} label="Favorites saved" value={MOCK_STATS.totalFavorites} />
           <StatCard icon={Clock} label="Avg gen time" value={`${MOCK_STATS.avgGenerationTime}s`} />
-        </section>
+        </section> */}
 
         <section className="grid gap-6 lg:grid-cols-3">
           <div className="card p-6 lg:col-span-2">
