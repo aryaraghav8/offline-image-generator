@@ -1,14 +1,34 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
-import type { AppSettings, ApiSettings, LocalSettings } from '@/types';
 
-interface SettingsStore extends AppSettings {
+import type {
+  AppSettings,
+  ApiSettings,
+  LocalSettings,
+} from '@/types';
+
+interface SettingsStore
+  extends AppSettings {
   apiSettings: ApiSettings;
   localSettings: LocalSettings;
 
-  updateSettings: (settings: Partial<AppSettings>) => void;
-  updateApiSettings: (settings: Partial<ApiSettings>) => void;
-  updateLocalSettings: (settings: Partial<LocalSettings>) => void;
+  updateSettings: (
+    settings: Partial<AppSettings>
+  ) => void;
+
+  updateApiSettings: (
+    settings: Partial<ApiSettings>
+  ) => void;
+
+  updateLocalSettings: (
+    settings: Partial<LocalSettings>
+  ) => void;
+
+  loadSettings: (data: {
+    settings: AppSettings;
+    apiSettings: ApiSettings;
+    localSettings: LocalSettings;
+  }) => void;
+
   resetToDefaults: () => void;
 }
 
@@ -21,6 +41,7 @@ const DEFAULT_SETTINGS: AppSettings = {
   defaultSteps: 20,
   defaultCfgScale: 7.5,
   autoSavePrompts: true,
+
   notifications: {
     generationComplete: true,
     generationFailed: true,
@@ -31,6 +52,7 @@ const DEFAULT_SETTINGS: AppSettings = {
 const DEFAULT_API_SETTINGS: ApiSettings = {
   provider: 'local',
   baseUrl: 'http://localhost:5000',
+  apiKey: '',
 };
 
 const DEFAULT_LOCAL_SETTINGS: LocalSettings = {
@@ -40,34 +62,60 @@ const DEFAULT_LOCAL_SETTINGS: LocalSettings = {
   port: 11434,
 };
 
-export const useSettingsStore = create<SettingsStore>()(
-  persist(
+export const useSettingsStore =
+  create<SettingsStore>(
     (set) => ({
       ...DEFAULT_SETTINGS,
-      apiSettings: DEFAULT_API_SETTINGS,
-      localSettings: DEFAULT_LOCAL_SETTINGS,
 
-      updateSettings: (settings) => set({ ...settings }),
+      apiSettings:
+        DEFAULT_API_SETTINGS,
 
-      updateApiSettings: (settings) =>
+      localSettings:
+        DEFAULT_LOCAL_SETTINGS,
+
+      loadSettings: (
+        data
+      ) =>
+        set({
+          ...data.settings,
+          apiSettings:
+            data.apiSettings,
+          localSettings:
+            data.localSettings,
+        }),
+
+      updateSettings: (
+        settings
+      ) =>
+        set(settings),
+
+      updateApiSettings: (
+        settings
+      ) =>
         set((state) => ({
-          apiSettings: { ...state.apiSettings, ...settings },
+          apiSettings: {
+            ...state.apiSettings,
+            ...settings,
+          },
         })),
 
-      updateLocalSettings: (settings) =>
+      updateLocalSettings: (
+        settings
+      ) =>
         set((state) => ({
-          localSettings: { ...state.localSettings, ...settings },
+          localSettings: {
+            ...state.localSettings,
+            ...settings,
+          },
         })),
 
       resetToDefaults: () =>
         set({
           ...DEFAULT_SETTINGS,
-          apiSettings: DEFAULT_API_SETTINGS,
-          localSettings: DEFAULT_LOCAL_SETTINGS,
+          apiSettings:
+            DEFAULT_API_SETTINGS,
+          localSettings:
+            DEFAULT_LOCAL_SETTINGS,
         }),
-    }),
-    {
-      name: 'settings-storage',
-    }
-  )
-);
+    })
+  );

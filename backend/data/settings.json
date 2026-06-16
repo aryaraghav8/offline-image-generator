@@ -1,0 +1,28 @@
+{
+  "settings": {
+    "theme": "dark",
+    "gridSize": "md",
+    "defaultModel": "flux",
+    "defaultWidth": 768,
+    "defaultHeight": 768,
+    "defaultSteps": 20,
+    "defaultCfgScale": 7.5,
+    "autoSavePrompts": true,
+    "notifications": {
+      "generationComplete": true,
+      "generationFailed": true,
+      "updates": false
+    }
+  },
+  "apiSettings": {
+    "provider": "local",
+    "apiKey": "",
+    "baseUrl": "http://localhost:5000"
+  },
+  "localSettings": {
+    "enabled": true,
+    "type": "ollama",
+    "baseUrl": "http://localhost",
+    "port": 1143
+  }
+}

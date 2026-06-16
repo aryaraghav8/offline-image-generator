@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from routes.models import router as models_router
-
+from routes.settings import (router as settings_router,)
 
 import base64
 import os
@@ -25,6 +25,7 @@ app.add_middleware(
 )
 
 app.include_router(models_router)
+app.include_router(settings_router)
 
 class GenerateRequest(BaseModel):
     prompt: str

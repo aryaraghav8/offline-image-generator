@@ -1,14 +1,36 @@
-import { useState } from 'react';
-import { CheckCircle, Eye, EyeOff, Key, Monitor, Save, Server, Settings } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import {
+  CheckCircle,
+  Eye,
+  EyeOff,
+  Key,
+  Monitor,
+  Save,
+  Server,
+  Settings,
+} from 'lucide-react';
+
+import { apiClient } from '@/services/api';
 import { useAppStore } from '@/stores/appStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 
-const SectionTitle = ({ icon: Icon, label, color }: { icon: typeof Settings; label: string; color: string }) => (
+const SectionTitle = ({
+  icon: Icon,
+  label,
+  color,
+}: {
+  icon: typeof Settings;
+  label: string;
+  color: string;
+}) => (
   <div className="mb-4 flex items-center gap-2">
     <div className={`rounded-lg p-1.5 ${color}`}>
       <Icon size={14} className="text-white" />
     </div>
-    <h2 className="text-sm font-semibold text-white">{label}</h2>
+
+    <h2 className="text-sm font-semibold text-white">
+      {label}
+    </h2>
   </div>
 );
 
@@ -29,22 +51,30 @@ const TextField = ({
 
   return (
     <div>
-      <label className="mb-1.5 block text-xs font-medium text-dark-300">{label}</label>
+      <label className="mb-1.5 block text-xs font-medium text-dark-300">
+        {label}
+      </label>
+
       <div className="relative">
         <input
           type={secret && !show ? 'password' : 'text'}
           value={value}
-          onChange={(event) => onChange(event.target.value)}
+          onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           className="w-full rounded-xl border border-dark-700 bg-dark-800 px-3 py-2.5 pr-10 font-mono text-sm text-white placeholder:text-dark-500 focus:border-indigo-500 focus:outline-none"
         />
+
         {secret && (
           <button
             type="button"
-            onClick={() => setShow(!show)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-dark-500 transition-colors hover:text-dark-300"
+            onClick={() => setShow((v) => !v)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-dark-500 hover:text-dark-300"
           >
-            {show ? <EyeOff size={15} /> : <Eye size={15} />}
+            {show ? (
+              <EyeOff size={15} />
+            ) : (
+              <Eye size={15} />
+            )}
           </button>
         )}
       </div>
@@ -52,31 +82,130 @@ const TextField = ({
   );
 };
 
-const Toggle = ({ label, desc, value, onChange }: { label: string; desc?: string; value: boolean; onChange: (value: boolean) => void }) => (
+const Toggle = ({
+  label,
+  desc,
+  value,
+  onChange,
+}: {
+  label: string;
+  desc?: string;
+  value: boolean;
+  onChange: (value: boolean) => void;
+}) => (
   <div className="flex items-center justify-between border-b border-dark-700 py-3 last:border-0">
     <div>
-      <p className="text-sm font-medium text-dark-300">{label}</p>
-      {desc && <p className="mt-0.5 text-xs text-dark-500">{desc}</p>}
+      <p className="text-sm font-medium text-dark-300">
+        {label}
+      </p>
+
+      {desc && (
+        <p className="mt-0.5 text-xs text-dark-500">
+          {desc}
+        </p>
+      )}
     </div>
+
     <button
       type="button"
       onClick={() => onChange(!value)}
-      className={`relative h-5 w-10 flex-shrink-0 rounded-full transition-colors ${value ? 'bg-indigo-500' : 'bg-dark-700'}`}
+      className={`relative h-5 w-10 rounded-full transition-colors ${
+        value
+          ? 'bg-indigo-500'
+          : 'bg-dark-700'
+      }`}
     >
-      <span className={`absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white transition-transform ${value ? 'translate-x-5' : 'translate-x-0'}`} />
+      <span
+        className={`absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white transition-transform ${
+          value
+            ? 'translate-x-5'
+            : 'translate-x-0'
+        }`}
+      />
     </button>
   </div>
 );
 
 export const SettingsPage = () => {
   const settings = useSettingsStore();
-  const addToast = useAppStore((state) => state.addToast);
+
+  const loadSettings = useSettingsStore(
+    (state) => state.loadSettings
+  );
+
+  const addToast = useAppStore(
+    (state) => state.addToast
+  );
+
   const [saved, setSaved] = useState(false);
 
-  const save = () => {
-    setSaved(true);
-    addToast('Settings saved', 'success');
-    window.setTimeout(() => setSaved(false), 1800);
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data =
+          await apiClient.getSettings();
+
+        loadSettings(data);
+      } catch (error) {
+        console.error(error);
+
+        addToast(
+          'Failed to load settings',
+          'error'
+        );
+      }
+    };
+
+    void load();
+  }, [loadSettings, addToast]);
+
+  const save = async () => {
+    try {
+      await apiClient.updateSettings({
+        settings: {
+          theme: settings.theme,
+          gridSize: settings.gridSize,
+          defaultModel:
+            settings.defaultModel,
+          defaultWidth:
+            settings.defaultWidth,
+          defaultHeight:
+            settings.defaultHeight,
+          defaultSteps:
+            settings.defaultSteps,
+          defaultCfgScale:
+            settings.defaultCfgScale,
+          autoSavePrompts:
+            settings.autoSavePrompts,
+          notifications:
+            settings.notifications,
+        },
+
+        apiSettings:
+          settings.apiSettings,
+
+        localSettings:
+          settings.localSettings,
+      });
+
+      setSaved(true);
+
+      addToast(
+        'Settings saved',
+        'success'
+      );
+
+      setTimeout(() => {
+        setSaved(false);
+      }, 1800);
+    } catch (error) {
+      console.error(error);
+
+      addToast(
+        'Failed to save settings',
+        'error'
+      );
+    }
   };
 
   return (
