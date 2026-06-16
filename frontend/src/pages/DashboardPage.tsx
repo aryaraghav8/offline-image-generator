@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import {
   ArrowRight,
-  Sparkles,
   TrendingUp,
   Zap,
 } from 'lucide-react';
@@ -12,19 +11,11 @@ import { ImageCard } from '@/components/gallery/ImageCard';
 import { apiClient } from '@/services/api';
 
 import { useAppStore } from '@/stores/appStore';
-import { useGenerationStore } from '@/stores/generationStore';
 
 import type { GeneratedImage } from '@/types';
 
 export const DashboardPage = () => {
   const navigate = useNavigate();
-
-  const { prompt, setPrompt } =
-    useGenerationStore();
-
-  const loading = useAppStore(
-    (state) => state.loading
-  );
 
   const models = useAppStore(
     (state) => state.models

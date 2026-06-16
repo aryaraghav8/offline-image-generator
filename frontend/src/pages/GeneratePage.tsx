@@ -86,7 +86,7 @@ export const GeneratePage = () => {
         height: generation.height,
         steps: generation.steps,
         cfgScale: generation.cfgScale,
-        seed: generation.seed,
+        seed: generation.seed ?? undefined,
         randomSeed: generation.randomSeed,
         count: generation.count,
       });
