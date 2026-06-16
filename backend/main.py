@@ -8,6 +8,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from routes.models import router as models_router
+
 
 import base64
 import os
@@ -21,6 +23,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(models_router)
 
 class GenerateRequest(BaseModel):
     prompt: str
@@ -146,4 +150,11 @@ async def get_images():
         return []
 
     with open(metadata_file, "r") as f:
-        return json.load(f)
+        images = json.load(f)
+    
+    images.sort(
+        key = lambda x: x["createdAt"],
+        reverse=True
+    )
+    
+    return images

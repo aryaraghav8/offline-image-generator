@@ -9,3 +9,9 @@ pillow
 huggingface_hub
 sentencepiece
 protobuf
+
+fastapi
+uvicorn[standard]
+openai
+python-dotenv
+python-multipart

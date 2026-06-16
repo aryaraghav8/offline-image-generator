@@ -6,7 +6,6 @@ const PAGE_TITLES: Record<string, { title: string; subtitle: string }> = {
   '/': { title: 'Dashboard', subtitle: 'Overview of your AI studio' },
   '/generate': { title: 'Generate', subtitle: 'Create images from text prompts' },
   '/gallery': { title: 'Gallery', subtitle: 'Browse your generated images' },
-  '/history': { title: 'History', subtitle: 'Previous generations and sessions' },
   '/models': { title: 'Models', subtitle: 'Manage your AI models' },
   '/settings': { title: 'Settings', subtitle: 'Configure your workspace' },
 };

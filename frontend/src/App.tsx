@@ -3,7 +3,6 @@ import { MainLayout } from '@/components/layout/MainLayout';
 import { DashboardPage } from '@/pages/DashboardPage';
 import { GalleryPage } from '@/pages/GalleryPage';
 import { GeneratePage } from '@/pages/GeneratePage';
-import { HistoryPage } from '@/pages/HistoryPage';
 import { ModelsPage } from '@/pages/ModelsPage';
 import { SettingsPage } from '@/pages/SettingsPage';
 
@@ -14,7 +13,6 @@ export const App = () => {
           <Route path="/" element={<DashboardPage />} />
           <Route path="/generate" element={<GeneratePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/history" element={<HistoryPage />} />
           <Route path="/models" element={<ModelsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
       </Route>

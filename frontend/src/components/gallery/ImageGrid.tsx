@@ -39,9 +39,9 @@ export const ImageGrid = ({ images, emptyMessage, onFavorite, onCopyPrompt }: Im
 
   return (
     <>
-      <div className="masonry-grid">
+      <div className="gallery-grid">
         {images.map((image) => (
-          <button key={image.id} type="button" className="masonry-item block w-full text-left" onClick={() => setFullscreenImage(image)}>
+          <button key={image.id} type="button" className="gallery-item-item block w-full text-left" onClick={() => setFullscreenImage(image)}>
             <ImageCard image={image} />
           </button>
         ))}

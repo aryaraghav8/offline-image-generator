@@ -1,0 +1,38 @@
+[
+  {
+    "id": "flux",
+    "displayName": "FLUX",
+    "description": "High quality image generation",
+    "category": "Text-to-Image",
+    "performance": "high-quality",
+    "size": "23 GB",
+    "vram": 12,
+    "quality": 95,
+    "lastUsed": null,
+    "installed": true
+  },
+  {
+    "id": "flux-fast",
+    "displayName": "FLUX Fast",
+    "description": "Fast image generation",
+    "category": "Text-to-Image",
+    "performance": "fast",
+    "size": "12 GB",
+    "vram": 8,
+    "quality": 85,
+    "lastUsed": null,
+    "installed": true
+  },
+  {
+    "id": "stable-diffusion",
+    "displayName": "Stable Diffusion",
+    "description": "Fast image generation",
+    "category": "Text-to-Image",
+    "performance": "fast",
+    "size": "4 GB",
+    "vram": 4,
+    "quality": 55,
+    "lastUsed": null,
+    "installed": true
+  }
+]

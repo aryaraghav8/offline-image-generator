@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Image, Settings2, Wand2 } from 'lucide-react';
+import { Image, Wand2 } from 'lucide-react';
 
 import { ImageGrid } from '@/components/gallery/ImageGrid';
 import {
   ModelSelector,
   PromptEditor,
-  GenerationSettings,
 } from '@/components/features/FormComponents';
 
 import { Button } from '@/components/ui/BaseComponents';
@@ -16,16 +15,19 @@ import { apiClient } from '@/services/api';
 
 import type { GeneratedImage } from '@/types';
 
-import { MOCK_MODELS } from '@/utils';
-
 export const GeneratePage = () => {
   const location = useLocation();
 
   const addToast = useAppStore((state) => state.addToast);
+
+  const models = useAppStore((state) => state.models);
+  const setModels = useAppStore((state) => state.setModels);
+
   const generation = useGenerationStore();
 
   const [results, setResults] = useState<GeneratedImage[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [loadingModels, setLoadingModels] = useState(true);
 
   useEffect(() => {
     const state = location.state as { prompt?: string } | null;
@@ -35,13 +37,41 @@ export const GeneratePage = () => {
     }
   }, [generation, location.state]);
 
+  useEffect(() => {
+    const loadModels = async () => {
+      try {
+        setLoadingModels(true);
+
+        const data = await apiClient.getModels();
+
+        setModels(data);
+
+        if (!generation.model && data.length > 0) {
+          generation.setModel(data[0].id);
+        }
+      } catch (error) {
+        console.error(error);
+        addToast('Failed to load models', 'error');
+      } finally {
+        setLoadingModels(false);
+      }
+    };
+
+    void loadModels();
+  }, [setModels, addToast]);
+
   const selectedModel =
-    MOCK_MODELS.find((model) => model.id === generation.model) ??
-    MOCK_MODELS[0];
+    models.find((model) => model.id === generation.model) ??
+    models[0];
 
   const handleGenerate = async () => {
     if (!generation.prompt.trim()) {
       addToast('Enter a prompt before generating', 'error');
+      return;
+    }
+
+    if (!selectedModel) {
+      addToast('No model selected', 'error');
       return;
     }
 
@@ -75,19 +105,42 @@ export const GeneratePage = () => {
 
       setResults((prev) => [image, ...prev]);
 
-      addToast('Image generated successfully', 'success');
+      addToast(
+        'Image generated successfully',
+        'success'
+      );
+
+      generation.setPrompt('');
     } catch (error) {
       console.error(error);
-      addToast('Generation failed', 'error');
+
+      addToast(
+        'Generation failed',
+        'error'
+      );
     } finally {
       setIsGenerating(false);
     }
   };
 
   const copyPrompt = async (prompt: string) => {
-    await navigator.clipboard.writeText(prompt);
-    addToast('Prompt copied', 'success');
+    try {
+      await navigator.clipboard.writeText(prompt);
+
+      addToast(
+        'Prompt copied',
+        'success'
+      );
+    } catch {
+      addToast(
+        'Failed to copy prompt',
+        'error'
+      );
+    }
   };
+
+  console.log('models', models);
+  console.log('selectedModel', selectedModel);
 
   return (
     <div className="flex h-full min-h-0 flex-col xl:flex-row">
@@ -102,7 +155,6 @@ export const GeneratePage = () => {
               prompt={generation.prompt}
               negativePrompt={generation.negativePrompt}
               onPromptChange={generation.setPrompt}
-              // onNegativePromptChange={generation.setNegativePrompt}
             />
           </section>
 
@@ -112,42 +164,31 @@ export const GeneratePage = () => {
               Model
             </h2>
 
-            <ModelSelector
-              models={MOCK_MODELS}
-              selectedModel={selectedModel}
-              onSelect={(model) => generation.setModel(model.id)}
-              compact
-            />
+            {loadingModels ? (
+              <div className="rounded-lg border border-dark-700 bg-dark-800 p-4 text-sm text-dark-400">
+                Loading models...
+              </div>
+            ) : (
+              <ModelSelector
+                models={models}
+                selectedModel={selectedModel}
+                onSelect={(model) =>
+                  generation.setModel(model.id)
+                }
+                compact
+              />
+            )}
           </section>
-
-          {/* <section>
-            <h2 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-dark-500">
-              <Settings2 size={14} />
-              Settings
-            </h2>
-
-            <GenerationSettings
-              width={generation.width}
-              onWidthChange={generation.setWidth}
-              height={generation.height}
-              onHeightChange={generation.setHeight}
-              steps={generation.steps}
-              onStepsChange={generation.setSteps}
-              cfgScale={generation.cfgScale}
-              onCfgScaleChange={generation.setCfgScale}
-              seed={generation.seed}
-              onSeedChange={generation.setSeed}
-              randomSeed={generation.randomSeed}
-              onRandomSeedChange={generation.setRandomSeed}
-              count={generation.count}
-              onCountChange={generation.setCount}
-            />
-          </section> */}
 
           <Button
             onClick={handleGenerate}
             isLoading={isGenerating}
             className="w-full"
+            disabled={
+              isGenerating ||
+              loadingModels ||
+              models.length === 0
+            }
           >
             <Wand2 size={16} />
             Generate

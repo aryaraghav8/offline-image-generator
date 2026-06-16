@@ -1,5 +1,260 @@
 [
   {
+    "id": "330ee7c6-c6d7-4d37-b684-3241b2f6f729",
+    "url": "http://localhost:8000/outputs/330ee7c6-c6d7-4d37-b684-3241b2f6f729.png",
+    "prompt": "scs",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:31:15.871598",
+    "generationTime": 4.17908,
+    "isFavorite": false
+  },
+  {
+    "id": "31150ead-37a9-4760-a4b3-5dec93488b6b",
+    "url": "http://localhost:8000/outputs/31150ead-37a9-4760-a4b3-5dec93488b6b.png",
+    "prompt": "czv",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:25:41.495991",
+    "generationTime": 3.837767,
+    "isFavorite": false
+  },
+  {
+    "id": "24966358-859a-4b1f-99fc-b09f8cd096b7",
+    "url": "http://localhost:8000/outputs/24966358-859a-4b1f-99fc-b09f8cd096b7.png",
+    "prompt": "dzncv ",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:25:32.968831",
+    "generationTime": 4.913477,
+    "isFavorite": false
+  },
+  {
+    "id": "4ed92df8-824a-4037-add6-c2c778982e2b",
+    "url": "http://localhost:8000/outputs/4ed92df8-824a-4037-add6-c2c778982e2b.png",
+    "prompt": "asc",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:24:15.100281",
+    "generationTime": 5.85402,
+    "isFavorite": false
+  },
+  {
+    "id": "6391ab5d-d85d-4b1a-985d-29d3e8db7fb7",
+    "url": "http://localhost:8000/outputs/6391ab5d-d85d-4b1a-985d-29d3e8db7fb7.png",
+    "prompt": "z x",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T11:13:30.065805",
+    "generationTime": 3.377313,
+    "isFavorite": false
+  },
+  {
+    "id": "c7049740-186d-4401-b25f-8dbe8e0ffb63",
+    "url": "http://localhost:8000/outputs/c7049740-186d-4401-b25f-8dbe8e0ffb63.png",
+    "prompt": "vas",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T11:11:27.318738",
+    "generationTime": 5.140138,
+    "isFavorite": false
+  },
+  {
+    "id": "9110da6d-bba3-47f4-9ecc-5838885570d5",
+    "url": "http://localhost:8000/outputs/9110da6d-bba3-47f4-9ecc-5838885570d5.png",
+    "prompt": "joint",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T10:26:54.030274",
+    "generationTime": 5.28401,
+    "isFavorite": false
+  },
+  {
+    "id": "0013c170-74c1-4fe9-bd24-422b60e08e2e",
+    "url": "http://localhost:8000/outputs/0013c170-74c1-4fe9-bd24-422b60e08e2e.png",
+    "prompt": "Young Indian woman confidently understanding call option concepts after completing her financial education lesson, cinematic fintech documentary style, ultra realistic, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:33:59.397892",
+    "generationTime": 4.020943,
+    "isFavorite": false
+  },
+  {
+    "id": "42f7c334-bbf8-4505-8a98-17ec9fce03d4",
+    "url": "http://localhost:8000/outputs/42f7c334-bbf8-4505-8a98-17ec9fce03d4.png",
+    "prompt": "Financial learner exploring the mechanics behind option valuation and premium calculation, premium fintech documentary style, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:33:07.872673",
+    "generationTime": 4.073821,
+    "isFavorite": false
+  },
+  {
+    "id": "16e1ad66-5b96-45b0-b082-3ecbecf09b99",
+    "url": "http://localhost:8000/outputs/16e1ad66-5b96-45b0-b082-3ecbecf09b99.png",
+    "prompt": "Financial learner exploring the mechanics behind option valuation and premium calculation, premium fintech documentary style, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:21:14.762636",
+    "generationTime": 4.027762,
+    "isFavorite": false
+  },
+  {
+    "id": "556a9f7f-5787-4822-b19a-017ffad4e094",
+    "url": "http://localhost:8000/outputs/556a9f7f-5787-4822-b19a-017ffad4e094.png",
+    "prompt": "Financial learner exploring the mechanics behind option valuation and premium calculation, premium fintech documentary style, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:18:05.522551",
+    "generationTime": 4.279395,
+    "isFavorite": false
+  },
+  {
+    "id": "2c146cef-8b0b-4e3b-8ce3-bd2d780048ee",
+    "url": "http://localhost:8000/outputs/2c146cef-8b0b-4e3b-8ce3-bd2d780048ee.png",
+    "prompt": "boat\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:57:33.192468",
+    "generationTime": 4.06273,
+    "isFavorite": false
+  },
+  {
+    "id": "7675f9de-8347-4c19-b6d4-9804c8129fbd",
+    "url": "http://localhost:8000/outputs/7675f9de-8347-4c19-b6d4-9804c8129fbd.png",
+    "prompt": "yt6ogl",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:56:46.518709",
+    "generationTime": 3.936949,
+    "isFavorite": false
+  },
+  {
+    "id": "6534a161-2fe9-4a24-895c-0c160aee70e1",
+    "url": "http://localhost:8000/outputs/6534a161-2fe9-4a24-895c-0c160aee70e1.png",
+    "prompt": "dsv",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:51:59.515680",
+    "generationTime": 15.56287,
+    "isFavorite": false
+  },
+  {
+    "id": "c1e87733-94d6-4015-ba23-2c303ed42bc8",
+    "url": "http://localhost:8000/outputs/c1e87733-94d6-4015-ba23-2c303ed42bc8.png",
+    "prompt": "dsv",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 768,
+      "height": 768,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:51:36.813678",
+    "generationTime": 4.722336,
+    "isFavorite": false
+  },
+  {
     "id": "20260612_135536",
     "url": "http://localhost:8000/outputs/generated_20260612_135536.png",
     "prompt": "A futuristic city at sunset",
@@ -122,6 +377,90 @@
       "count": 1
     },
     "createdAt": "2026-06-12T15:09:30.315466",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_131951",
+    "url": "http://localhost:8000/outputs/generated_20260616_131951.png",
+    "prompt": "erhsrtdsx",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "erhsrtdsx",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T13:19:51.927630",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_144544",
+    "url": "http://localhost:8000/outputs/generated_20260616_144544.png",
+    "prompt": "zb",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "zb",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T14:45:44.593343",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_144655",
+    "url": "http://localhost:8000/outputs/generated_20260616_144655.png",
+    "prompt": "ar",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "ar",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T14:46:55.846016",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_150112",
+    "url": "http://localhost:8000/outputs/generated_20260616_150112.png",
+    "prompt": "adirtya",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "adirtya",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T15:01:12.116917",
     "generationTime": 0,
     "isFavorite": false
   }

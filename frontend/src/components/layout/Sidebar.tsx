@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import {
   ChevronRight,
   Cpu,
-  History,
   Images,
   LayoutDashboard,
   Settings,
@@ -16,7 +15,6 @@ const NAV_ITEMS = [
   { to: '/', icon: LayoutDashboard, label: 'Dashboard', exact: true },
   { to: '/generate', icon: Wand2, label: 'Generate' },
   { to: '/gallery', icon: Images, label: 'Gallery' },
-  { to: '/history', icon: History, label: 'History' },
   { to: '/models', icon: Cpu, label: 'Models' },
   { to: '/settings', icon: Settings, label: 'Settings' },
 ];
