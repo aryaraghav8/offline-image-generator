@@ -155,6 +155,8 @@ export const GeneratePage = () => {
               prompt={generation.prompt}
               negativePrompt={generation.negativePrompt}
               onPromptChange={generation.setPrompt}
+              onGenerate={handleGenerate}
+              isGenerating={isGenerating}
             />
           </section>
 

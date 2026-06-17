@@ -463,5 +463,341 @@
     "createdAt": "2026-06-16T15:01:12.116917",
     "generationTime": 0,
     "isFavorite": false
+  },
+  {
+    "id": "20260616_164149",
+    "url": "http://localhost:8000/outputs/generated_20260616_164149.png",
+    "prompt": "jcb",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jcb",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:41:49.700600",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164215",
+    "url": "http://localhost:8000/outputs/generated_20260616_164215.png",
+    "prompt": "jcb yellow baba ki",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jcb yellow baba ki",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:42:15.905119",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164252",
+    "url": "http://localhost:8000/outputs/generated_20260616_164252.png",
+    "prompt": "jcb yellow\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jcb yellow\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:42:52.260041",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164320",
+    "url": "http://localhost:8000/outputs/generated_20260616_164320.png",
+    "prompt": "black tatti on yellow jcb\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "black tatti on yellow jcb\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:43:20.995094",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164359",
+    "url": "http://localhost:8000/outputs/generated_20260616_164359.png",
+    "prompt": "baba doing poty",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "baba doing poty",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:43:59.660126",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164421",
+    "url": "http://localhost:8000/outputs/generated_20260616_164421.png",
+    "prompt": "eating poop",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "eating poop",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:44:21.332612",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_165711",
+    "url": "http://localhost:8000/outputs/generated_20260616_165711.png",
+    "prompt": "A serene landscape with mountains and a lake at sunset",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "A serene landscape with mountains and a lake at sunset",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:57:11.484139",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_165922",
+    "url": "http://localhost:8000/outputs/generated_20260616_165922.png",
+    "prompt": "A serene landscape with mountains and a lake at sunset\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "A serene landscape with mountains and a lake at sunset\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:59:22.119217",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_170110",
+    "url": "http://localhost:8000/outputs/generated_20260616_170110.png",
+    "prompt": "venom and spiderman puching",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "venom and spiderman puching",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:01:10.353683",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_170202",
+    "url": "http://localhost:8000/outputs/generated_20260616_170202.png",
+    "prompt": "venom wallpapper with dark background",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "venom wallpapper with dark background",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:02:02.138916",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_170430",
+    "url": "http://localhost:8000/outputs/generated_20260616_170430.png",
+    "prompt": "spiderman wallpaper",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "spiderman wallpaper",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:04:30.881113",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171113",
+    "url": "http://localhost:8000/outputs/generated_20260616_171113.png",
+    "prompt": "gta",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "gta",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:11:13.262062",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171256",
+    "url": "http://localhost:8000/outputs/generated_20260616_171256.png",
+    "prompt": "AAFM comany promoting their CWM course",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "AAFM comany promoting their CWM course",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:12:56.738139",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171625",
+    "url": "http://localhost:8000/outputs/generated_20260616_171625.png",
+    "prompt": "bob the builder",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "bob the builder",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:16:25.310368",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171706",
+    "url": "http://localhost:8000/outputs/generated_20260616_171706.png",
+    "prompt": "cre",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "cre",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:17:06.473164",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171717",
+    "url": "http://localhost:8000/outputs/generated_20260616_171717.png",
+    "prompt": "create a image",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "create a image",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:17:17.493926",
+    "generationTime": 0,
+    "isFavorite": false
   }
 ]

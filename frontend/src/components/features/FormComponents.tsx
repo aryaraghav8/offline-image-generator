@@ -86,6 +86,8 @@ interface PromptEditorProps {
   onPromptChange: (prompt: string) => void;
   negativePrompt?: string;
   onNegativePromptChange?: (prompt: string) => void;
+  onGenerate?: () => void;
+  isGenerating?: boolean;
   templates?: PromptTemplate[];
 }
 
@@ -94,6 +96,8 @@ export const PromptEditor: React.FC<PromptEditorProps> = ({
   onPromptChange,
   negativePrompt,
   onNegativePromptChange,
+  onGenerate,
+  isGenerating = false,
   templates,
 }) => {
   const [showTemplates, setShowTemplates] = React.useState(false);
@@ -112,6 +116,16 @@ export const PromptEditor: React.FC<PromptEditorProps> = ({
           maxLength={2000}
           showCharCount
           rows={4}
+          onKeyDown={(e) => {
+            if (
+              e.key === 'Enter' &&
+              !e.shiftKey &&
+              !isGenerating
+            ) {
+              e.preventDefault();
+              onGenerate?.();
+            }
+          }}
         />
 
         {onNegativePromptChange && (
