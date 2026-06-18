@@ -1,0 +1,5 @@
+{
+  "retentionDays": 90,
+  "autoCleanupEnabled": true,
+  "lastCleanupAt": null
+}

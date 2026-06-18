@@ -1,5 +1,43 @@
 [
   {
+    "id": "236b1dc7-362e-449e-80fb-113d64a3940c",
+    "url": "http://localhost:8000/outputs/236b1dc7-362e-449e-80fb-113d64a3940c.png",
+    "prompt": "iron man",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "seed": null,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-18T11:41:33.789177",
+    "generationTime": 5.226991,
+    "isFavorite": false
+  },
+  {
+    "id": "2a7cb23b-d0d4-40bd-9ba9-5f2a8e66b6ee",
+    "url": "http://localhost:8000/outputs/2a7cb23b-d0d4-40bd-9ba9-5f2a8e66b6ee.png",
+    "prompt": "king pin",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "seed": null,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-18T11:34:14.506235",
+    "generationTime": 5.176898,
+    "isFavorite": false
+  },
+  {
     "id": "08e4d840-aeb9-4989-805f-91cc8fd5dc7e",
     "url": "http://localhost:8000/outputs/08e4d840-aeb9-4989-805f-91cc8fd5dc7e.png",
     "prompt": "boat",

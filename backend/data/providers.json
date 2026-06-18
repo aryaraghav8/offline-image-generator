@@ -1,0 +1,56 @@
+[
+  {
+    "id": "pollinations",
+    "name": "Pollinations",
+    "kind": "api",
+    "description": "Default hosted generation API used for Flux models.",
+    "status": "connected",
+    "baseUrl": "https://gen.pollinations.ai/v1",
+    "hasApiKey": false,
+    "modelsSupplied": 2,
+    "requestsToday": 0,
+    "lastChecked": null,
+    "monthlySpend": 0.0,
+    "monthlyBudget": 100.0
+  },
+  {
+    "id": "comfyui",
+    "name": "ComfyUI",
+    "kind": "local",
+    "description": "Local node-based Stable Diffusion backend running on this machine.",
+    "status": "disconnected",
+    "baseUrl": "http://127.0.0.1:8188",
+    "hasApiKey": false,
+    "modelsSupplied": 0,
+    "requestsToday": 0,
+    "lastChecked": null
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "kind": "api",
+    "description": "Optional provider for DALL\u00b7E-class generation.",
+    "status": "disconnected",
+    "baseUrl": "https://api.openai.com/v1",
+    "hasApiKey": false,
+    "modelsSupplied": 0,
+    "requestsToday": 0,
+    "lastChecked": null,
+    "monthlySpend": 0.0,
+    "monthlyBudget": 25.0
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face Inference",
+    "kind": "api",
+    "description": "Fallback provider for community-hosted checkpoints.",
+    "status": "disconnected",
+    "baseUrl": "https://api-inference.huggingface.co",
+    "hasApiKey": false,
+    "modelsSupplied": 0,
+    "requestsToday": 0,
+    "lastChecked": null,
+    "monthlySpend": 0.0,
+    "monthlyBudget": 25.0
+  }
+]

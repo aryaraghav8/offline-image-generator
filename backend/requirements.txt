@@ -1,17 +1,27 @@
-torch
-torchvision
-torchaudio
-diffusers
-transformers
-accelerate
-safetensors
-pillow
-huggingface_hub
-sentencepiece
-protobuf
-
+# ── Web framework ───────────────────────────────────────────────────────────
 fastapi
 uvicorn[standard]
-openai
-python-dotenv
 python-multipart
+
+# ── API clients ─────────────────────────────────────────────────────────────
+openai
+httpx          # lightweight async HTTP — used for provider health checks
+
+# ── Config / utilities ──────────────────────────────────────────────────────
+python-dotenv
+pillow         # image info (size, format) for storage stats
+
+# ── Optional: local inference ───────────────────────────────────────────────
+# Uncomment these only if you want to run Stable Diffusion locally.
+# They are NOT required for the Pollinations-backed default setup.
+#
+# torch
+# torchvision
+# torchaudio
+# diffusers
+# transformers
+# accelerate
+# safetensors
+# huggingface_hub
+# sentencepiece
+# protobuf

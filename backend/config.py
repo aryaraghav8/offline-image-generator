@@ -6,40 +6,32 @@ load_dotenv()
 
 class Config:
 
-    POLLINATIONS_API_KEY = os.getenv(
-        "POLLINATIONS_API_KEY",
-        ""
-    )
+    # ── Paths ─────────────────────────────────────────────────────────────
+    OUTPUT_DIR = os.getenv("OUTPUT_DIR", "outputs")
+    DATA_DIR   = os.getenv("DATA_DIR",   "data")
 
-    OUTPUT_DIR = os.getenv(
-        "OUTPUT_DIR",
-        "outputs"
-    )
+    # ── Network ───────────────────────────────────────────────────────────
+    BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 
-    DATA_DIR = os.getenv(
-        "DATA_DIR",
-        "data"
-    )
+    # ── Provider ──────────────────────────────────────────────────────────
+    POLLINATIONS_API_KEY = os.getenv("POLLINATIONS_API_KEY", "")
+    POLLINATIONS_BASE_URL = "https://gen.pollinations.ai/v1"
 
-    BASE_URL = os.getenv(
-        "BASE_URL",
-        "http://localhost:8000"
-    )
+    # ── Defaults ──────────────────────────────────────────────────────────
+    DEFAULT_MODEL = os.getenv("IMAGE_MODEL", "flux")
 
-    DEFAULT_MODEL = os.getenv(
-        "IMAGE_MODEL",
-        "flux"
-    )
+    # ── Admin ─────────────────────────────────────────────────────────────
+    ADMIN_SECRET       = os.getenv("ADMIN_SECRET", "changeme")
+    STORAGE_TOTAL_BYTES = int(os.getenv("STORAGE_TOTAL_BYTES", str(500 * 1024 ** 3)))
+    API_VERSION        = "1.5.0"
+    ENVIRONMENT        = os.getenv("ENVIRONMENT", "development")
+
+    # ── Data file helpers ─────────────────────────────────────────────────
+    @classmethod
+    def data_path(cls, filename: str) -> str:
+        return os.path.join(cls.DATA_DIR, filename)
 
     @classmethod
     def init_directories(cls):
-
-        os.makedirs(
-            cls.OUTPUT_DIR,
-            exist_ok=True
-        )
-
-        os.makedirs(
-            cls.DATA_DIR,
-            exist_ok=True
-        )
+        os.makedirs(cls.OUTPUT_DIR, exist_ok=True)
+        os.makedirs(cls.DATA_DIR,   exist_ok=True)

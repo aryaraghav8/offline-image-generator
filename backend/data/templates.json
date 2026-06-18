@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tpl-cinematic",
+    "name": "Cinematic Portrait",
+    "category": "Portrait",
+    "description": "Dramatic lighting, shallow depth of field, film-still composition.",
+    "content": "cinematic portrait of {subject}, dramatic rim lighting, shallow depth of field, anamorphic lens, film grain, 35mm",
+    "published": true,
+    "usageCount": 0,
+    "createdAt": "2026-03-01T09:00:00Z",
+    "updatedAt": "2026-03-01T09:00:00Z",
+    "author": "Admin"
+  },
+  {
+    "id": "tpl-product",
+    "name": "Studio Product Shot",
+    "category": "Product",
+    "description": "Neutral background product photography with soft studio lighting.",
+    "content": "studio product photo of {subject}, seamless white background, soft box lighting, high detail, commercial photography",
+    "published": true,
+    "usageCount": 0,
+    "createdAt": "2026-02-18T09:00:00Z",
+    "updatedAt": "2026-02-18T09:00:00Z",
+    "author": "Admin"
+  },
+  {
+    "id": "tpl-concept",
+    "name": "Sci-fi Concept Art",
+    "category": "Concept Art",
+    "description": "Wide environment concept art with atmospheric depth.",
+    "content": "sci-fi concept art of {subject}, atmospheric depth, volumetric lighting, matte painting, wide angle",
+    "published": false,
+    "usageCount": 0,
+    "createdAt": "2026-06-10T09:00:00Z",
+    "updatedAt": "2026-06-10T09:00:00Z",
+    "author": "Admin"
+  }
+]

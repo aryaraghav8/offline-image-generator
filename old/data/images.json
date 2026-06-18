@@ -1,0 +1,1123 @@
+[
+  {
+    "id": "08e4d840-aeb9-4989-805f-91cc8fd5dc7e",
+    "url": "http://localhost:8000/outputs/08e4d840-aeb9-4989-805f-91cc8fd5dc7e.png",
+    "prompt": "boat",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-18T10:13:11.586404",
+    "generationTime": 4.518617,
+    "isFavorite": false
+  },
+  {
+    "id": "e58055cc-4ea3-44d1-aed9-99969b10e89d",
+    "url": "http://localhost:8000/outputs/e58055cc-4ea3-44d1-aed9-99969b10e89d.png",
+    "prompt": "af",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T18:00:33.792041",
+    "generationTime": 4.112344,
+    "isFavorite": false
+  },
+  {
+    "id": "ae3c10ff-2e80-4899-8ae1-f38ed0c1aa7d",
+    "url": "http://localhost:8000/outputs/ae3c10ff-2e80-4899-8ae1-f38ed0c1aa7d.png",
+    "prompt": "sgds",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T15:56:27.911193",
+    "generationTime": 6.018152,
+    "isFavorite": false
+  },
+  {
+    "id": "95e39884-6cd8-482a-9771-bae1786034bd",
+    "url": "http://localhost:8000/outputs/95e39884-6cd8-482a-9771-bae1786034bd.png",
+    "prompt": "slide",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T15:36:38.914744",
+    "generationTime": 4.757429,
+    "isFavorite": false
+  },
+  {
+    "id": "330ee7c6-c6d7-4d37-b684-3241b2f6f729",
+    "url": "http://localhost:8000/outputs/330ee7c6-c6d7-4d37-b684-3241b2f6f729.png",
+    "prompt": "scs",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:31:15.871598",
+    "generationTime": 4.17908,
+    "isFavorite": false
+  },
+  {
+    "id": "31150ead-37a9-4760-a4b3-5dec93488b6b",
+    "url": "http://localhost:8000/outputs/31150ead-37a9-4760-a4b3-5dec93488b6b.png",
+    "prompt": "czv",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:25:41.495991",
+    "generationTime": 3.837767,
+    "isFavorite": false
+  },
+  {
+    "id": "24966358-859a-4b1f-99fc-b09f8cd096b7",
+    "url": "http://localhost:8000/outputs/24966358-859a-4b1f-99fc-b09f8cd096b7.png",
+    "prompt": "dzncv ",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:25:32.968831",
+    "generationTime": 4.913477,
+    "isFavorite": false
+  },
+  {
+    "id": "4ed92df8-824a-4037-add6-c2c778982e2b",
+    "url": "http://localhost:8000/outputs/4ed92df8-824a-4037-add6-c2c778982e2b.png",
+    "prompt": "asc",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T12:24:15.100281",
+    "generationTime": 5.85402,
+    "isFavorite": false
+  },
+  {
+    "id": "6391ab5d-d85d-4b1a-985d-29d3e8db7fb7",
+    "url": "http://localhost:8000/outputs/6391ab5d-d85d-4b1a-985d-29d3e8db7fb7.png",
+    "prompt": "z x",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T11:13:30.065805",
+    "generationTime": 3.377313,
+    "isFavorite": false
+  },
+  {
+    "id": "c7049740-186d-4401-b25f-8dbe8e0ffb63",
+    "url": "http://localhost:8000/outputs/c7049740-186d-4401-b25f-8dbe8e0ffb63.png",
+    "prompt": "vas",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T11:11:27.318738",
+    "generationTime": 5.140138,
+    "isFavorite": false
+  },
+  {
+    "id": "9110da6d-bba3-47f4-9ecc-5838885570d5",
+    "url": "http://localhost:8000/outputs/9110da6d-bba3-47f4-9ecc-5838885570d5.png",
+    "prompt": "joint",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-13T10:26:54.030274",
+    "generationTime": 5.28401,
+    "isFavorite": false
+  },
+  {
+    "id": "0013c170-74c1-4fe9-bd24-422b60e08e2e",
+    "url": "http://localhost:8000/outputs/0013c170-74c1-4fe9-bd24-422b60e08e2e.png",
+    "prompt": "Young Indian woman confidently understanding call option concepts after completing her financial education lesson, cinematic fintech documentary style, ultra realistic, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:33:59.397892",
+    "generationTime": 4.020943,
+    "isFavorite": false
+  },
+  {
+    "id": "42f7c334-bbf8-4505-8a98-17ec9fce03d4",
+    "url": "http://localhost:8000/outputs/42f7c334-bbf8-4505-8a98-17ec9fce03d4.png",
+    "prompt": "Financial learner exploring the mechanics behind option valuation and premium calculation, premium fintech documentary style, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:33:07.872673",
+    "generationTime": 4.073821,
+    "isFavorite": false
+  },
+  {
+    "id": "16e1ad66-5b96-45b0-b082-3ecbecf09b99",
+    "url": "http://localhost:8000/outputs/16e1ad66-5b96-45b0-b082-3ecbecf09b99.png",
+    "prompt": "Financial learner exploring the mechanics behind option valuation and premium calculation, premium fintech documentary style, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:21:14.762636",
+    "generationTime": 4.027762,
+    "isFavorite": false
+  },
+  {
+    "id": "556a9f7f-5787-4822-b19a-017ffad4e094",
+    "url": "http://localhost:8000/outputs/556a9f7f-5787-4822-b19a-017ffad4e094.png",
+    "prompt": "Financial learner exploring the mechanics behind option valuation and premium calculation, premium fintech documentary style, landscape 16:9, 4K, NO TEXT ANYWHERE IN THE IMAGE",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T17:18:05.522551",
+    "generationTime": 4.279395,
+    "isFavorite": false
+  },
+  {
+    "id": "2c146cef-8b0b-4e3b-8ce3-bd2d780048ee",
+    "url": "http://localhost:8000/outputs/2c146cef-8b0b-4e3b-8ce3-bd2d780048ee.png",
+    "prompt": "boat\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:57:33.192468",
+    "generationTime": 4.06273,
+    "isFavorite": false
+  },
+  {
+    "id": "7675f9de-8347-4c19-b6d4-9804c8129fbd",
+    "url": "http://localhost:8000/outputs/7675f9de-8347-4c19-b6d4-9804c8129fbd.png",
+    "prompt": "yt6ogl",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:56:46.518709",
+    "generationTime": 3.936949,
+    "isFavorite": false
+  },
+  {
+    "id": "6534a161-2fe9-4a24-895c-0c160aee70e1",
+    "url": "http://localhost:8000/outputs/6534a161-2fe9-4a24-895c-0c160aee70e1.png",
+    "prompt": "dsv",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:51:59.515680",
+    "generationTime": 15.56287,
+    "isFavorite": false
+  },
+  {
+    "id": "c1e87733-94d6-4015-ba23-2c303ed42bc8",
+    "url": "http://localhost:8000/outputs/c1e87733-94d6-4015-ba23-2c303ed42bc8.png",
+    "prompt": "dsv",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T16:51:36.813678",
+    "generationTime": 4.722336,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_135536",
+    "url": "http://localhost:8000/outputs/generated_20260612_135536.png",
+    "prompt": "A futuristic city at sunset",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "A futuristic city at sunset",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T13:55:36.702038",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_143921",
+    "url": "http://localhost:8000/outputs/generated_20260612_143921.png",
+    "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T14:39:21.225087",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_144318",
+    "url": "http://localhost:8000/outputs/generated_20260612_144318.png",
+    "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "Ultra-realistic cinematic financial documentary, realistic Indian female character, premium Netflix-style production, realistic photography, dramatic lighting, highly detailed hospitality and financial environments, natural human expressions, educational storytelling, NO TEXT ANYWHERE IN THE IMAGE, no words, no letters, no numbers, no labels, no captions, no logos, no watermarks, no UI text, no visible writing, pure visual storytelling only, landscape 16:9, 4K.\n",
+      "negativePrompt": "",
+      "model": "abd",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T14:43:18.030977",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_150707",
+    "url": "http://localhost:8000/outputs/generated_20260612_150707.png",
+    "prompt": "boad",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "boad",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T15:07:07.221868",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_150919",
+    "url": "http://localhost:8000/outputs/generated_20260612_150919.png",
+    "prompt": "boad",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "boad",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T15:09:19.014623",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260612_150930",
+    "url": "http://localhost:8000/outputs/generated_20260612_150930.png",
+    "prompt": "boat",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "boat",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-12T15:09:30.315466",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_131951",
+    "url": "http://localhost:8000/outputs/generated_20260616_131951.png",
+    "prompt": "erhsrtdsx",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "erhsrtdsx",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T13:19:51.927630",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_144544",
+    "url": "http://localhost:8000/outputs/generated_20260616_144544.png",
+    "prompt": "zb",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "zb",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T14:45:44.593343",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_144655",
+    "url": "http://localhost:8000/outputs/generated_20260616_144655.png",
+    "prompt": "ar",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "ar",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T14:46:55.846016",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_150112",
+    "url": "http://localhost:8000/outputs/generated_20260616_150112.png",
+    "prompt": "adirtya",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "adirtya",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T15:01:12.116917",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164149",
+    "url": "http://localhost:8000/outputs/generated_20260616_164149.png",
+    "prompt": "jcb",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jcb",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:41:49.700600",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164215",
+    "url": "http://localhost:8000/outputs/generated_20260616_164215.png",
+    "prompt": "jcb yellow baba ki",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jcb yellow baba ki",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:42:15.905119",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164252",
+    "url": "http://localhost:8000/outputs/generated_20260616_164252.png",
+    "prompt": "jcb yellow\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jcb yellow\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:42:52.260041",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164320",
+    "url": "http://localhost:8000/outputs/generated_20260616_164320.png",
+    "prompt": "black tatti on yellow jcb\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "black tatti on yellow jcb\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:43:20.995094",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164359",
+    "url": "http://localhost:8000/outputs/generated_20260616_164359.png",
+    "prompt": "baba doing poty",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "baba doing poty",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:43:59.660126",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_164421",
+    "url": "http://localhost:8000/outputs/generated_20260616_164421.png",
+    "prompt": "eating poop",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "eating poop",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:44:21.332612",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_165711",
+    "url": "http://localhost:8000/outputs/generated_20260616_165711.png",
+    "prompt": "A serene landscape with mountains and a lake at sunset",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "A serene landscape with mountains and a lake at sunset",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:57:11.484139",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_165922",
+    "url": "http://localhost:8000/outputs/generated_20260616_165922.png",
+    "prompt": "A serene landscape with mountains and a lake at sunset\n",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "A serene landscape with mountains and a lake at sunset\n",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T16:59:22.119217",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_170110",
+    "url": "http://localhost:8000/outputs/generated_20260616_170110.png",
+    "prompt": "venom and spiderman puching",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "venom and spiderman puching",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:01:10.353683",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_170202",
+    "url": "http://localhost:8000/outputs/generated_20260616_170202.png",
+    "prompt": "venom wallpapper with dark background",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "venom wallpapper with dark background",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:02:02.138916",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_170430",
+    "url": "http://localhost:8000/outputs/generated_20260616_170430.png",
+    "prompt": "spiderman wallpaper",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "spiderman wallpaper",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:04:30.881113",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171113",
+    "url": "http://localhost:8000/outputs/generated_20260616_171113.png",
+    "prompt": "gta",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "gta",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:11:13.262062",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171256",
+    "url": "http://localhost:8000/outputs/generated_20260616_171256.png",
+    "prompt": "AAFM comany promoting their CWM course",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "AAFM comany promoting their CWM course",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:12:56.738139",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171625",
+    "url": "http://localhost:8000/outputs/generated_20260616_171625.png",
+    "prompt": "bob the builder",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "bob the builder",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:16:25.310368",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171706",
+    "url": "http://localhost:8000/outputs/generated_20260616_171706.png",
+    "prompt": "cre",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "cre",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:17:06.473164",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260616_171717",
+    "url": "http://localhost:8000/outputs/generated_20260616_171717.png",
+    "prompt": "create a image",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "create a image",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-16T17:17:17.493926",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_120819",
+    "url": "http://localhost:8000/outputs/generated_20260617_120819.png",
+    "prompt": "jab aankhen band karun",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jab aankhen band karun",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:08:19.829615",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_120926",
+    "url": "http://localhost:8000/outputs/generated_20260617_120926.png",
+    "prompt": "afghanistan",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "afghanistan",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:09:26.888223",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_122523",
+    "url": "http://localhost:8000/outputs/generated_20260617_122523.png",
+    "prompt": "india",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "india",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:25:23.428049",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_122537",
+    "url": "http://localhost:8000/outputs/generated_20260617_122537.png",
+    "prompt": "indian market",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "indian market",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:25:37.109429",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_122556",
+    "url": "http://localhost:8000/outputs/generated_20260617_122556.png",
+    "prompt": "delhi market ",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "delhi market ",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:25:56.084249",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_124205",
+    "url": "http://localhost:8000/outputs/generated_20260617_124205.png",
+    "prompt": "sfsaz",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "sfsaz",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:42:05.592041",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_124219",
+    "url": "http://localhost:8000/outputs/generated_20260617_124219.png",
+    "prompt": "avssd",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "avssd",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:42:19.564526",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_124318",
+    "url": "http://localhost:8000/outputs/generated_20260617_124318.png",
+    "prompt": "cz",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "cz",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:43:18.984659",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_125808",
+    "url": "http://localhost:8000/outputs/generated_20260617_125808.png",
+    "prompt": "boat",
+    "negativePrompt": "",
+    "model": "nova-canvas",
+    "params": {
+      "prompt": "boat",
+      "negativePrompt": "",
+      "model": "nova-canvas",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:58:08.541822",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_125824",
+    "url": "http://localhost:8000/outputs/generated_20260617_125824.png",
+    "prompt": "delhi market",
+    "negativePrompt": "",
+    "model": "nova-canvas",
+    "params": {
+      "prompt": "delhi market",
+      "negativePrompt": "",
+      "model": "nova-canvas",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:58:24.153520",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_153032",
+    "url": "http://localhost:8000/outputs/generated_20260617_153032.png",
+    "prompt": "sdvsd",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "sdvsd",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T15:30:32.908800",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_170424",
+    "url": "http://localhost:8000/outputs/generated_20260617_170424.png",
+    "prompt": "create a image of 29-year-old Indian woman named Riya: long wavy black hair, dark brown eyes, warm medium-brown skin tone, calm and thoughtful expression, wearing a mustard/ochre cable-knit sweater. Keep her in the same seated pose.",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "create a image of 29-year-old Indian woman named Riya: long wavy black hair, dark brown eyes, warm medium-brown skin tone, calm and thoughtful expression, wearing a mustard/ochre cable-knit sweater. Keep her in the same seated pose.",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T17:04:24.418379",
+    "generationTime": 0,
+    "isFavorite": false
+  }
+]

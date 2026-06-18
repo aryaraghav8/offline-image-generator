@@ -6,7 +6,7 @@ from services.model_service import (
     uninstall_model,
 )
 
-router = APIRouter()
+router = APIRouter(tags=["models"])
 
 
 @router.get("/api/models")
