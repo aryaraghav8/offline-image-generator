@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.schemas import RestartRequest
+from schemas.schemas import RestartRequest
 from services.system_service import get_system_overview, restart_service
 
 router = APIRouter(prefix="/api/admin/system", tags=["admin-system"])

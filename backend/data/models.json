@@ -64,7 +64,7 @@
     "displayName": "nova-canvas by aws",
     "slug": "nova-canvas",
     "description": "Fast image generation",
-    "provider": "AWS",
+    "provider": "Pollinations",
     "category": "text-to-image",
     "status": "active",
     "performance": "fast",

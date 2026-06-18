@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.schemas import RetentionPolicyUpdate
+from schemas.schemas import RetentionPolicyUpdate
 from services.storage_service import (
     get_storage_overview,
     update_retention_policy,

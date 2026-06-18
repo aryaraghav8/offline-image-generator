@@ -23,6 +23,21 @@ export interface AdminModel {
   version: string;
 }
 
+// ─── Admin: Connect model source ────────────────────────────────────────────
+
+export type ModelSourceKind = 'api' | 'local' | 'huggingface';
+
+export interface NewModelSource {
+  kind: ModelSourceKind;
+  displayName: string;
+  description: string;
+  baseUrl: string;
+  apiKey: string;
+  modelId: string;
+  hfRepo: string;
+  vram: number;
+}
+
 // ─── Admin: Providers ───────────────────────────────────────────────────────
 
 export type ProviderStatus = 'connected' | 'disconnected' | 'error' | 'untested';

@@ -1,5 +1,24 @@
 [
   {
+    "id": "1f142718-bc21-4750-a749-791df65e906a",
+    "url": "http://localhost:8000/outputs/1f142718-bc21-4750-a749-791df65e906a.png",
+    "prompt": "varsha ki photo",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "seed": null,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-18T12:51:24.523917",
+    "generationTime": 4.986451,
+    "isFavorite": false
+  },
+  {
     "id": "236b1dc7-362e-449e-80fb-113d64a3940c",
     "url": "http://localhost:8000/outputs/236b1dc7-362e-449e-80fb-113d64a3940c.png",
     "prompt": "iron man",

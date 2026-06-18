@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.schemas import AdminModelUpdate, NewModelSource
+from schemas.schemas import AdminModelUpdate, NewModelSource
 from services.model_service import (
     admin_get_models,
     admin_update_model,

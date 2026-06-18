@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.schemas import GenerateRequest
+from schemas.schemas import GenerateRequest
 from services.generation_service import generate_image
 
 router = APIRouter(tags=["generation"])

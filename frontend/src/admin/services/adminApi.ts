@@ -5,6 +5,7 @@ import type {
   StorageOverview,
   SystemOverview,
   AdminDashboardOverview,
+  NewModelSource,
 } from '@/admin/types';
 
 const ADMIN_BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api')
@@ -48,6 +49,13 @@ export async function setDefaultModel(id: string): Promise<AdminModel[]> {
 
 export async function removeModel(id: string): Promise<void> {
   await apiFetch<void>(`/models/${id}`, { method: 'DELETE' });
+}
+
+export async function addModelSource(source: NewModelSource): Promise<AdminModel> {
+  return apiFetch<AdminModel>('/models', {
+    method: 'POST',
+    body: JSON.stringify(source),
+  });
 }
 
 // ─── Providers ──────────────────────────────────────────────────────────────

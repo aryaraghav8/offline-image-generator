@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.schemas import ProviderKeyUpdate
+from schemas.schemas import ProviderKeyUpdate
 from services.provider_service import (
     get_providers,
     test_provider,

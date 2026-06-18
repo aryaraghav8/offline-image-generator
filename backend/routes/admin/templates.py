@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models.schemas import TemplatePayload, TemplatePublishUpdate
+from schemas.schemas import TemplatePayload, TemplatePublishUpdate
 from services.template_service import (
     get_templates,
     upsert_template,

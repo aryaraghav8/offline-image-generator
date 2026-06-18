@@ -18,7 +18,7 @@ class GenerateRequest(BaseModel):
     count:    int   = 1
 
 
-# ─── Admin: Templates ─────────────────────────────────────────────────────────
+# ─── Model: Templates ─────────────────────────────────────────────────────────
 
 class ModelRequest(BaseModel):
     id: str
@@ -36,12 +36,25 @@ class ModelRequest(BaseModel):
     enabled: bool = True
     installed: bool = False
     lastUsed: Optional[str] = None
+
+
 # ─── Admin: Models ────────────────────────────────────────────────────────────
 
 class AdminModelUpdate(BaseModel):
     status:         Optional[Literal["active", "installing", "disabled", "error", "not-installed"]] = None
     visibleToUsers: Optional[bool] = None
     isDefault:      Optional[bool] = None
+
+
+class NewModelSource(BaseModel):
+    kind:        Literal["api", "local", "huggingface"]
+    displayName: str
+    description: str = ""
+    baseUrl:     str = ""
+    apiKey:      str = ""
+    modelId:     str = ""
+    hfRepo:      str = ""
+    vram:        int = 8
 
 
 # ─── Admin: Providers ─────────────────────────────────────────────────────────
@@ -60,7 +73,6 @@ class TemplatePayload(BaseModel):
     content:     str
     published:   bool = False
     author:      str  = "Admin"
-
 
 
 class TemplatePublishUpdate(BaseModel):
