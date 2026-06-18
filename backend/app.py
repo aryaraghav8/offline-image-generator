@@ -7,6 +7,7 @@ from config import Config
 from routes.generate import router as generate_router
 from routes.gallery import router as gallery_router
 from routes.health import router as health_router
+from routes.models import router as models_router
 
 Config.init_directories()
 
@@ -32,3 +33,4 @@ app.mount(
 app.include_router(generate_router)
 app.include_router(gallery_router)
 app.include_router(health_router)
+app.include_router(models_router)

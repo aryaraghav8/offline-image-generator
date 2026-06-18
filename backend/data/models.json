@@ -24,8 +24,20 @@
     "installed": true
   },
   {
-    "id": "stable-diffusion",
-    "displayName": "Stable Diffusion",
+    "id": "stabilityai/sdxl-turbo",
+    "displayName": "Stable Diffusion Turbo",
+    "description": "Fast image generation",
+    "category": "Text-to-Image",
+    "performance": "fast",
+    "size": "4 GB",
+    "vram": 4,
+    "quality": 55,
+    "lastUsed": null,
+    "installed": true
+  },
+  {
+    "id": "nova-canvas",
+    "displayName": "nova-canvas by aws",
     "description": "Fast image generation",
     "category": "Text-to-Image",
     "performance": "fast",

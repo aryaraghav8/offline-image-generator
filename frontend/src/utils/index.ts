@@ -81,10 +81,10 @@ export const PERFORMANCE_BADGES: Record<string, string> = {
 };
 
 export const ASPECT_RATIOS = {
-  'square': { width: 768, height: 768, label: '1:1 Square' },
-  'portrait': { width: 576, height: 768, label: '3:4 Portrait' },
+  'square': { width: 1024, height: 1024, label: '1:1 Square' },
+  'portrait': { width: 576, height: 1024, label: '3:4 Portrait' },
   'landscape': { width: 1024, height: 576, label: '16:9 Landscape' },
-  'mobile': { width: 512, height: 768, label: '9:16 Mobile' },
+  'mobile': { width: 512, height: 1024, label: '9:16 Mobile' },
 };
 
 export function validatePrompt(prompt: string): { valid: boolean; error?: string } {
@@ -223,8 +223,8 @@ const demoParams = {
   prompt: '',
   negativePrompt: '',
   model: 'flux',
-  width: 768,
-  height: 768,
+  width: 1024,
+  height: 1024,
   steps: 20,
   cfgScale: 7.5,
   randomSeed: true,

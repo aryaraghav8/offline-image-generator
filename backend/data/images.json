@@ -1,13 +1,81 @@
 [
   {
+    "id": "08e4d840-aeb9-4989-805f-91cc8fd5dc7e",
+    "url": "http://localhost:8000/outputs/08e4d840-aeb9-4989-805f-91cc8fd5dc7e.png",
+    "prompt": "boat",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-18T10:13:11.586404",
+    "generationTime": 4.518617,
+    "isFavorite": false
+  },
+  {
+    "id": "e58055cc-4ea3-44d1-aed9-99969b10e89d",
+    "url": "http://localhost:8000/outputs/e58055cc-4ea3-44d1-aed9-99969b10e89d.png",
+    "prompt": "af",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T18:00:33.792041",
+    "generationTime": 4.112344,
+    "isFavorite": false
+  },
+  {
+    "id": "ae3c10ff-2e80-4899-8ae1-f38ed0c1aa7d",
+    "url": "http://localhost:8000/outputs/ae3c10ff-2e80-4899-8ae1-f38ed0c1aa7d.png",
+    "prompt": "sgds",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T15:56:27.911193",
+    "generationTime": 6.018152,
+    "isFavorite": false
+  },
+  {
+    "id": "95e39884-6cd8-482a-9771-bae1786034bd",
+    "url": "http://localhost:8000/outputs/95e39884-6cd8-482a-9771-bae1786034bd.png",
+    "prompt": "slide",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 20,
+      "cfgScale": 7.5,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T15:36:38.914744",
+    "generationTime": 4.757429,
+    "isFavorite": false
+  },
+  {
     "id": "330ee7c6-c6d7-4d37-b684-3241b2f6f729",
     "url": "http://localhost:8000/outputs/330ee7c6-c6d7-4d37-b684-3241b2f6f729.png",
     "prompt": "scs",
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -23,8 +91,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -40,8 +108,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -57,8 +125,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -74,8 +142,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -91,8 +159,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -108,8 +176,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -125,8 +193,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -142,8 +210,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -159,8 +227,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -176,8 +244,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -193,8 +261,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -210,8 +278,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -227,8 +295,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -244,8 +312,8 @@
     "negativePrompt": "",
     "model": "flux",
     "params": {
-      "width": 768,
-      "height": 768,
+      "width": 1024,
+      "height": 1024,
       "steps": 20,
       "cfgScale": 7.5,
       "count": 1
@@ -797,6 +865,258 @@
       "count": 1
     },
     "createdAt": "2026-06-16T17:17:17.493926",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_120819",
+    "url": "http://localhost:8000/outputs/generated_20260617_120819.png",
+    "prompt": "jab aankhen band karun",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "jab aankhen band karun",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:08:19.829615",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_120926",
+    "url": "http://localhost:8000/outputs/generated_20260617_120926.png",
+    "prompt": "afghanistan",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "afghanistan",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:09:26.888223",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_122523",
+    "url": "http://localhost:8000/outputs/generated_20260617_122523.png",
+    "prompt": "india",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "india",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:25:23.428049",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_122537",
+    "url": "http://localhost:8000/outputs/generated_20260617_122537.png",
+    "prompt": "indian market",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "indian market",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:25:37.109429",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_122556",
+    "url": "http://localhost:8000/outputs/generated_20260617_122556.png",
+    "prompt": "delhi market ",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "delhi market ",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:25:56.084249",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_124205",
+    "url": "http://localhost:8000/outputs/generated_20260617_124205.png",
+    "prompt": "sfsaz",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "sfsaz",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:42:05.592041",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_124219",
+    "url": "http://localhost:8000/outputs/generated_20260617_124219.png",
+    "prompt": "avssd",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "avssd",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:42:19.564526",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_124318",
+    "url": "http://localhost:8000/outputs/generated_20260617_124318.png",
+    "prompt": "cz",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "cz",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:43:18.984659",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_125808",
+    "url": "http://localhost:8000/outputs/generated_20260617_125808.png",
+    "prompt": "boat",
+    "negativePrompt": "",
+    "model": "nova-canvas",
+    "params": {
+      "prompt": "boat",
+      "negativePrompt": "",
+      "model": "nova-canvas",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:58:08.541822",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_125824",
+    "url": "http://localhost:8000/outputs/generated_20260617_125824.png",
+    "prompt": "delhi market",
+    "negativePrompt": "",
+    "model": "nova-canvas",
+    "params": {
+      "prompt": "delhi market",
+      "negativePrompt": "",
+      "model": "nova-canvas",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T12:58:24.153520",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_153032",
+    "url": "http://localhost:8000/outputs/generated_20260617_153032.png",
+    "prompt": "sdvsd",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "sdvsd",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T15:30:32.908800",
+    "generationTime": 0,
+    "isFavorite": false
+  },
+  {
+    "id": "20260617_170424",
+    "url": "http://localhost:8000/outputs/generated_20260617_170424.png",
+    "prompt": "create a image of 29-year-old Indian woman named Riya: long wavy black hair, dark brown eyes, warm medium-brown skin tone, calm and thoughtful expression, wearing a mustard/ochre cable-knit sweater. Keep her in the same seated pose.",
+    "negativePrompt": "",
+    "model": "flux",
+    "params": {
+      "prompt": "create a image of 29-year-old Indian woman named Riya: long wavy black hair, dark brown eyes, warm medium-brown skin tone, calm and thoughtful expression, wearing a mustard/ochre cable-knit sweater. Keep her in the same seated pose.",
+      "negativePrompt": "",
+      "model": "flux",
+      "width": 1024,
+      "height": 1024,
+      "steps": 30,
+      "cfgScale": 7,
+      "randomSeed": true,
+      "count": 1
+    },
+    "createdAt": "2026-06-17T17:04:24.418379",
     "generationTime": 0,
     "isFavorite": false
   }

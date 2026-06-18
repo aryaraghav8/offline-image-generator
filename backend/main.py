@@ -3,16 +3,21 @@ from openai import OpenAI
 from datetime import datetime
 from pathlib import Path
 import json
+import base64
+import os
 
 from fastapi import FastAPI
+from fastapi import HTTPException
 from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from routes.models import router as models_router
+from routes.generate import generate as generate_router
+from routes.health import health as health_router
 from routes.settings import (router as settings_router,)
+from services.generation_service import generate_image 
+from models.generate_schema import GenerateRequest
 
-import base64
-import os
 
 app = FastAPI()
 
@@ -23,21 +28,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app.include_router(models_router)
-app.include_router(settings_router)
-
-class GenerateRequest(BaseModel):
-    prompt: str
-    negativePrompt: str | None = None
-    model: str = "flux"
-    width: int = 1024
-    height: int = 1024
-    steps: int = 30
-    cfgScale: float = 7.0
-    seed: int | None = None
-    randomSeed: bool = True
-    count: int = 1
 
 load_dotenv()
 
@@ -59,88 +49,41 @@ client = OpenAI(
     base_url="https://gen.pollinations.ai/v1"
 )
 
+app.include_router(models_router)
+app.include_router(settings_router)
+
+
+
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# Serve generated images
+app.mount(
+    "/outputs",
+    StaticFiles(directory=OUTPUT_DIR),
+    name="outputs"
+)
+
+
 @app.post("/api/generate")
-async def generate_image(data: GenerateRequest):
+async def generate(data: GenerateRequest):
 
-    try:
+    result = generate_image(data)
 
-        result = client.images.generate(
-            model = data.model,
-            prompt=data.prompt
+    print("generate main")
+    if not result["success"]:
+        raise HTTPException(
+            status_code=400,
+            detail=result["error"]
         )
 
-        image_bytes = base64.b64decode(
-            result.data[0].b64_json
-        )
-
-        timestamp = datetime.now().strftime(
-            "%Y%m%d_%H%M%S"
-        )
-
-        filename = f"generated_{timestamp}.png"
-
-        output_path = os.path.join(
-            OUTPUT_DIR,
-            filename
-        )
-
-        with open(output_path, "wb") as f:
-            f.write(image_bytes)
-            
-        os.makedirs("data", exist_ok=True)
-
-        metadata_file = "data/images.json"
-
-        if os.path.exists(metadata_file):
-            try:
-                with open(metadata_file, "r") as f:
-                    images = json.load(f)
-            except:
-                images = []
-        else:
-            images = []
-            
-        images.append({
-            "id": timestamp,
-            "url": f"http://localhost:8000/outputs/{filename}",
-            "prompt": data.prompt,
-            "negativePrompt": "",
-            "model": data.model,
-            "params": {
-                "prompt": data.prompt,
-                "negativePrompt": "",
-                "model": data.model,
-                "width": 1024,
-                "height": 1024,
-                "steps": 30,
-                "cfgScale": 7,
-                "randomSeed": True,
-                "count": 1
-            },
-            "createdAt": datetime.now().isoformat(),
-            "generationTime": 0,
-            "isFavorite": False
-        })
-
-        with open(metadata_file, "w") as f:
-            json.dump(images, f, indent=2)
-
-        return {
-            "success": True,
-            "imageUrl": f"http://localhost:8000/outputs/{filename}"
-        }
-
-    except Exception as e:
-
-        return {
-            "success": False,
-            "error": str(e)
-        }
-        
+    return result
         
 @app.get("/api/health")
-def health():
-    return {"status": "ok"}
+def healthYou():
+    result = health_router()
+    print("result is : ", result)
+    return result
 
 @app.get("/api/images")
 async def get_images():

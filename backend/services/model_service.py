@@ -6,6 +6,10 @@ MODELS_FILE = Path("data/models.json")
 
 
 def load_models():
+    
+    print("Current directory:", Path.cwd())
+    print("Models file:", MODELS_FILE.resolve())
+    print("Exists:", MODELS_FILE.exists())
     if not MODELS_FILE.exists():
         return []
 

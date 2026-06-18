@@ -91,6 +91,22 @@ export const GeneratePage = () => {
         count: generation.count,
       });
 
+      if (!response.success) {
+        addToast(
+          response.error || 'Generation failed',
+          'error'
+        );
+        return;
+      }
+
+      if (!response.imageUrl) {
+        addToast(
+          'No image was returned by the server',
+          'error'
+        );
+        return;
+      }
+
       const image: GeneratedImage = {
         id: Date.now().toString(),
         url: response.imageUrl,

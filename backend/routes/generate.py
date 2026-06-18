@@ -1,16 +1,11 @@
-from fastapi import APIRouter
-from models.schemas import (GenerateRequest)
+from models.generate_schema import GenerateRequest
 from services.generation_service import (generate_image)
 
-router = APIRouter()
 
-
-@router.post(
-    "/api/generate"
-)
 async def generate(
     data: GenerateRequest
 ):
+    print("generate route")
 
     return generate_image(
         data

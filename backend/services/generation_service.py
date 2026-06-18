@@ -5,18 +5,21 @@ import base64
 import logging
 
 from datetime import datetime
+from models.generate_schema import (GenerateRequest)
 from openai import OpenAI
 from config import Config
 
 logger = logging.getLogger(__name__)
 
+
+# Pollinations Client
 client = OpenAI(
-    api_key=Config.POLLINATIONS_API_KEY,
+    api_key=os.getenv("POLLINATIONS_API_KEY"),
     base_url="https://gen.pollinations.ai/v1"
 )
 
-
-def generate_image(data):
+def generate_image(data: GenerateRequest):
+    print("generate main")
 
     try:
 
