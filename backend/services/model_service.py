@@ -158,6 +158,67 @@ def admin_remove_model(model_id: str) -> None:
     _save(new_models)
 
 
+def admin_add_model_source(source: dict) -> dict:
+    """Register a new model source and persist it."""
+    import re
+    from datetime import datetime, timezone
+
+    models = _load()
+
+    # Derive a slug / id from displayName
+    slug = re.sub(r"[^a-z0-9]+", "-", source["displayName"].lower()).strip("-")
+    model_id = slug
+    # Ensure uniqueness
+    existing_ids = {m["id"] for m in models}
+    suffix = 1
+    while model_id in existing_ids:
+        model_id = f"{slug}-{suffix}"
+        suffix += 1
+
+    kind = source.get("kind", "api")
+    if kind == "huggingface":
+        provider = f"Hugging Face · {source.get('hfRepo', '').split('/')[0] or 'HF'}"
+    elif kind == "local":
+        provider = "Local · Custom"
+    else:
+        # Derive provider from baseUrl hostname if available
+        base_url = source.get("baseUrl", "")
+        try:
+            from urllib.parse import urlparse
+            hostname = urlparse(base_url).hostname or "API"
+            provider = hostname.replace("www.", "").split(".")[0].capitalize()
+        except Exception:
+            provider = "API"
+
+    new_model: dict = {
+        "id": model_id,
+        "displayName": source["displayName"],
+        "slug": slug,
+        "description": source.get("description") or "",
+        "provider": provider,
+        "category": "text-to-image",
+        "status": "active",
+        "size": "Unknown",
+        "vram": source.get("vram", 8),
+        "visibleToUsers": True,
+        "isDefault": False,
+        "usageCount": 0,
+        "lastUsed": None,
+        "addedAt": datetime.now(timezone.utc).isoformat(),
+        "version": "1.0",
+        "installed": True,
+        # Source-specific metadata (not exposed to users)
+        "sourceKind": kind,
+        "baseUrl": source.get("baseUrl", ""),
+        "modelId": source.get("modelId", ""),
+        "hfRepo": source.get("hfRepo", ""),
+    }
+
+    models.append(new_model)
+    _save(models)
+    return new_model
+
+
 def increment_usage(model_id: str) -> None:
     """Called after a successful generation to track usage count."""
     try:

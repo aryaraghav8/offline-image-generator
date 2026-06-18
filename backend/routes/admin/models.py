@@ -1,10 +1,11 @@
 from fastapi import APIRouter
-from models.schemas import AdminModelUpdate
+from models.schemas import AdminModelUpdate, NewModelSource
 from services.model_service import (
     admin_get_models,
     admin_update_model,
     admin_set_default_model,
     admin_remove_model,
+    admin_add_model_source,
 )
 
 router = APIRouter(prefix="/api/admin/models", tags=["admin-models"])
@@ -13,6 +14,11 @@ router = APIRouter(prefix="/api/admin/models", tags=["admin-models"])
 @router.get("")
 async def get_models():
     return admin_get_models()
+
+
+@router.post("")
+async def add_model_source(body: NewModelSource):
+    return admin_add_model_source(body.model_dump())
 
 
 @router.patch("/{model_id}")
