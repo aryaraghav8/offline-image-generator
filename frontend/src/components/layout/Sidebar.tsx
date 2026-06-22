@@ -45,7 +45,7 @@ export const Sidebar = () => {
             </div>
             <div>
               <span className="text-sm font-bold tracking-wide text-white">Lumina</span>
-              <span className="block text-xs leading-none text-dark-500">AI Studio</span>
+              <span className="block text-xs leading-none text-dark-500">By Aditya</span>
             </div>
           </div>
           <button

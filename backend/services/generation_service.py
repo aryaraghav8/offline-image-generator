@@ -1,27 +1,20 @@
 from __future__ import annotations
 
-import base64
 import json
 import logging
 import os
 import uuid
 from datetime import datetime
 
-from openai import OpenAI
-
 from config import Config
+from services.model_service import get_model_record
 
 logger = logging.getLogger(__name__)
-
-_client = OpenAI(
-    api_key=Config.POLLINATIONS_API_KEY or "dummy",
-    base_url=Config.POLLINATIONS_BASE_URL,
-)
 
 METADATA_FILE = Config.data_path("images.json")
 
 
-# ─── Helpers ──────────────────────────────────────────────────────────────────
+# ─── Image metadata helpers ───────────────────────────────────────────────────
 
 def _load_images() -> list[dict]:
     if not os.path.exists(METADATA_FILE):
@@ -39,29 +32,85 @@ def _save_images(images: list[dict]) -> None:
         json.dump(images, f, indent=2)
 
 
+# ─── Backend router ───────────────────────────────────────────────────────────
+
+def _call_backend(model: dict, data) -> bytes:
+    """
+    Inspect model['sourceKind'] and dispatch to the right provider backend.
+
+    sourceKind values:
+      "api"          → Pollinations (openai-compat, default)
+      "local"        → ComfyUI running locally
+      "ollama"       → Ollama running locally (OpenAI-compat /v1/images/generations)
+      "huggingface"  → Hugging Face Inference API
+      "openai"       → OpenAI DALL-E API
+    """
+    kind = (model.get("sourceKind") or "api").lower()
+    seed = None if data.randomSeed else data.seed
+
+    common = dict(
+        prompt=data.prompt,
+        width=data.width,
+        height=data.height,
+        steps=data.steps,
+        cfg_scale=data.cfgScale,
+        seed=seed,
+    )
+
+    if kind == "ollama":
+        from services.providers.ollama_backend import generate
+        return generate(
+            model_id=model.get("modelId") or model["id"],
+            base_url=model.get("baseUrl", ""),
+            **common,
+        )
+
+    if kind == "local":
+        from services.providers.comfyui_backend import generate
+        return generate(
+            model_id=model.get("modelId") or model["id"],
+            base_url=model.get("baseUrl", ""),
+            **common,
+        )
+
+    if kind == "huggingface":
+        from services.providers.huggingface_backend import generate
+        return generate(
+            model_id=model.get("modelId") or model["id"],
+            hf_repo=model.get("hfRepo", ""),
+            **common,
+        )
+
+    if kind == "openai":
+        from services.providers.openai_backend import generate
+        return generate(
+            model_id=model.get("modelId") or model["id"],
+            **common,
+        )
+
+    # Default: Pollinations (kind == "api" or anything unrecognised)
+    from services.providers.pollinations_backend import generate
+    return generate(
+        model_id=model.get("modelId") or model["id"],
+        **common,
+    )
+
+
 # ─── Generation ───────────────────────────────────────────────────────────────
 
 def generate_image(data) -> dict:
     try:
         start_time = datetime.now()
 
-        # Build extra kwargs Pollinations accepts (ignored silently if unsupported)
-        extra: dict = {}
-        if not data.randomSeed and data.seed is not None:
-            extra["seed"] = data.seed
+        # Look up full model record so we know its sourceKind / routing fields
+        model = get_model_record(data.model)
+        if not model:
+            return {"success": False, "error": f"Unknown model '{data.model}'"}
 
-        result = _client.images.generate(
-            model=data.model,
-            prompt=data.prompt,
-            size=f"{data.width}x{data.height}",
-            n=1,
-            **extra,
-        )
+        image_bytes = _call_backend(model, data)
 
-        image_bytes = base64.b64decode(result.data[0].b64_json)
-
-        image_id = str(uuid.uuid4())
-        filename = f"{image_id}.png"
+        image_id  = str(uuid.uuid4())
+        filename  = f"{image_id}.png"
         output_path = os.path.join(Config.OUTPUT_DIR, filename)
         os.makedirs(Config.OUTPUT_DIR, exist_ok=True)
 
@@ -72,23 +121,24 @@ def generate_image(data) -> dict:
         image_url = f"{Config.BASE_URL}/outputs/{filename}"
 
         image_data = {
-            "id": image_id,
-            "url": image_url,
-            "prompt": data.prompt,
+            "id":             image_id,
+            "url":            image_url,
+            "prompt":         data.prompt,
             "negativePrompt": data.negativePrompt or "",
-            "model": data.model,
+            "model":          data.model,
+            "sourceKind":     model.get("sourceKind", "api"),
             "params": {
-                "width": data.width,
-                "height": data.height,
-                "steps": data.steps,
-                "cfgScale": data.cfgScale,
-                "seed": data.seed,
+                "width":      data.width,
+                "height":     data.height,
+                "steps":      data.steps,
+                "cfgScale":   data.cfgScale,
+                "seed":       data.seed,
                 "randomSeed": data.randomSeed,
-                "count": data.count,
+                "count":      data.count,
             },
-            "createdAt": datetime.now().isoformat(),
+            "createdAt":      datetime.now().isoformat(),
             "generationTime": generation_time,
-            "isFavorite": False,
+            "isFavorite":     False,
         }
 
         images = _load_images()
@@ -109,8 +159,7 @@ def get_gallery() -> list[dict]:
 
 
 def get_image(image_id: str) -> dict | None:
-    images = _load_images()
-    return next((img for img in images if img["id"] == image_id), None)
+    return next((img for img in _load_images() if img["id"] == image_id), None)
 
 
 def delete_image(image_id: str) -> bool:
@@ -118,13 +167,9 @@ def delete_image(image_id: str) -> bool:
     new_images = [img for img in images if img["id"] != image_id]
     if len(new_images) == len(images):
         return False
-
-    # Remove file from disk
-    filename = f"{image_id}.png"
-    filepath = os.path.join(Config.OUTPUT_DIR, filename)
+    filepath = os.path.join(Config.OUTPUT_DIR, f"{image_id}.png")
     if os.path.exists(filepath):
         os.remove(filepath)
-
     _save_images(new_images)
     return True
 
@@ -144,6 +189,5 @@ def get_favorites() -> list[dict]:
 
 
 def get_image_path(image_id: str) -> str | None:
-    filename = f"{image_id}.png"
-    path = os.path.join(Config.OUTPUT_DIR, filename)
+    path = os.path.join(Config.OUTPUT_DIR, f"{image_id}.png")
     return path if os.path.exists(path) else None

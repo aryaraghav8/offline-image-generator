@@ -38,6 +38,18 @@ _DEFAULT_PROVIDERS: list[dict] = [
         "lastChecked": None,
     },
     {
+        "id": "ollama",
+        "name": "Ollama",
+        "kind": "local",
+        "description": "Local Ollama runtime for image-generation models (requires Ollama >= 0.5).",
+        "status": "disconnected",
+        "baseUrl": "http://127.0.0.1:11434",
+        "hasApiKey": False,
+        "modelsSupplied": 0,
+        "requestsToday": 0,
+        "lastChecked": None,
+    },
+    {
         "id": "openai",
         "name": "OpenAI",
         "kind": "api",

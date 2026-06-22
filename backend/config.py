@@ -13,9 +13,14 @@ class Config:
     # ── Network ───────────────────────────────────────────────────────────
     BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 
-    # ── Provider ──────────────────────────────────────────────────────────
-    POLLINATIONS_API_KEY = os.getenv("POLLINATIONS_API_KEY", "")
+    # ── Providers ─────────────────────────────────────────────────────────
+    POLLINATIONS_API_KEY  = os.getenv("POLLINATIONS_API_KEY", "")
     POLLINATIONS_BASE_URL = "https://gen.pollinations.ai/v1"
+
+    OPENAI_API_KEY   = os.getenv("OPENAI_API_KEY", "")
+    HF_API_KEY       = os.getenv("HF_API_KEY", "")
+    COMFYUI_BASE_URL = os.getenv("COMFYUI_BASE_URL", "http://127.0.0.1:8188")
+    OLLAMA_BASE_URL  = os.getenv("OLLAMA_BASE_URL",  "http://127.0.0.1:11434")
 
     # ── Defaults ──────────────────────────────────────────────────────────
     DEFAULT_MODEL = os.getenv("IMAGE_MODEL", "flux")

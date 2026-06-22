@@ -1,65 +1,125 @@
 from __future__ import annotations
 
 import json
+import re
+from datetime import datetime, timezone
 from pathlib import Path
+
 from fastapi import HTTPException
 
 MODELS_FILE = Path("data/models.json")
 
 _DEFAULT_MODELS: list[dict] = [
     {
-        "id": "flux",
-        "displayName": "Flux Dev",
-        "slug": "flux",
-        "description": "State-of-the-art text-to-image model with excellent prompt adherence and photorealism.",
-        "provider": "Pollinations",
-        "category": "text-to-image",
-        "status": "active",
-        "size": "23.8 GB",
-        "vram": 24,
+        "id":             "flux",
+        "displayName":    "Flux Dev",
+        "slug":           "flux",
+        "description":    "State-of-the-art text-to-image model with excellent prompt adherence and photorealism.",
+        "provider":       "Pollinations",
+        "category":       "text-to-image",
+        "status":         "active",
+        "size":           "23.8 GB",
+        "vram":           24,
         "visibleToUsers": True,
-        "isDefault": True,
-        "usageCount": 0,
-        "lastUsed": None,
-        "addedAt": "2026-02-11T10:00:00Z",
-        "version": "1.0",
-        "installed": True,
+        "isDefault":      True,
+        "usageCount":     0,
+        "lastUsed":       None,
+        "addedAt":        "2026-02-11T10:00:00Z",
+        "version":        "1.0",
+        "installed":      True,
+        # ── routing fields ──────────────────────────────────────────
+        "sourceKind":     "api",      # "api" | "local" | "huggingface" | "openai"
+        "baseUrl":        "",         # override provider URL (local / custom API)
+        "modelId":        "flux",     # model string sent to the backend
+        "hfRepo":         "",         # only used when sourceKind == "huggingface"
     },
     {
-        "id": "flux-schnell",
-        "displayName": "Flux Schnell",
-        "slug": "flux-schnell",
-        "description": "Fast Flux variant optimized for rapid iteration with strong visual quality.",
-        "provider": "Pollinations",
-        "category": "text-to-image",
-        "status": "active",
-        "size": "23.8 GB",
-        "vram": 16,
+        "id":             "flux-schnell",
+        "displayName":    "Flux Schnell",
+        "slug":           "flux-schnell",
+        "description":    "Fast Flux variant optimised for rapid iteration with strong visual quality.",
+        "provider":       "Pollinations",
+        "category":       "text-to-image",
+        "status":         "active",
+        "size":           "23.8 GB",
+        "vram":           16,
         "visibleToUsers": True,
-        "isDefault": False,
-        "usageCount": 0,
-        "lastUsed": None,
-        "addedAt": "2026-02-11T10:00:00Z",
-        "version": "1.0",
-        "installed": True,
+        "isDefault":      False,
+        "usageCount":     0,
+        "lastUsed":       None,
+        "addedAt":        "2026-02-11T10:00:00Z",
+        "version":        "1.0",
+        "installed":      True,
+        "sourceKind":     "api",
+        "baseUrl":        "",
+        "modelId":        "flux-schnell",
+        "hfRepo":         "",
     },
     {
-        "id": "stable-diffusion",
-        "displayName": "Stable Diffusion XL",
-        "slug": "stable-diffusion-xl",
-        "description": "High-resolution general model with broad style coverage.",
-        "provider": "Local · ComfyUI",
-        "category": "text-to-image",
-        "status": "active",
-        "size": "6.5 GB",
-        "vram": 10,
+        "id":             "stable-diffusion",
+        "displayName":    "Stable Diffusion XL",
+        "slug":           "stable-diffusion-xl",
+        "description":    "High-resolution general model with broad style coverage, running locally via ComfyUI.",
+        "provider":       "Local · ComfyUI",
+        "category":       "text-to-image",
+        "status":         "active",
+        "size":           "6.5 GB",
+        "vram":           10,
         "visibleToUsers": True,
-        "isDefault": False,
-        "usageCount": 0,
-        "lastUsed": None,
-        "addedAt": "2026-03-02T10:00:00Z",
-        "version": "1.0",
-        "installed": True,
+        "isDefault":      False,
+        "usageCount":     0,
+        "lastUsed":       None,
+        "addedAt":        "2026-03-02T10:00:00Z",
+        "version":        "1.0",
+        "installed":      True,
+        "sourceKind":     "local",
+        "baseUrl":        "http://127.0.0.1:8188",
+        "modelId":        "sd_xl_base_1.0.safetensors",
+        "hfRepo":         "",
+    },
+    {
+        "id":             "dall-e-3",
+        "displayName":    "DALL·E 3",
+        "slug":           "dall-e-3",
+        "description":    "OpenAI's highest-quality image generation model.",
+        "provider":       "OpenAI",
+        "category":       "text-to-image",
+        "status":         "active",
+        "size":           "—",
+        "vram":           0,
+        "visibleToUsers": True,
+        "isDefault":      False,
+        "usageCount":     0,
+        "lastUsed":       None,
+        "addedAt":        "2026-03-02T10:00:00Z",
+        "version":        "3",
+        "installed":      True,
+        "sourceKind":     "openai",
+        "baseUrl":        "",
+        "modelId":        "dall-e-3",
+        "hfRepo":         "",
+    },
+    {
+        "id":             "ollama-flux",
+        "displayName":    "FLUX (Ollama)",
+        "slug":           "ollama-flux",
+        "description":    "FLUX.1-dev running locally via Ollama. Pull with: ollama pull hf.co/black-forest-labs/FLUX.1-dev",
+        "provider":       "Local · Ollama",
+        "category":       "text-to-image",
+        "status":         "active",
+        "size":           "~24 GB",
+        "vram":           12,
+        "visibleToUsers": True,
+        "isDefault":      False,
+        "usageCount":     0,
+        "lastUsed":       None,
+        "addedAt":        "2026-06-01T10:00:00Z",
+        "version":        "1.0",
+        "installed":      False,
+        "sourceKind":     "ollama",
+        "baseUrl":        "http://127.0.0.1:11434",
+        "modelId":        "hf.co/black-forest-labs/FLUX.1-dev",
+        "hfRepo":         "",
     },
 ]
 
@@ -81,15 +141,37 @@ def _save(models: list[dict]) -> None:
 # ─── User-facing ──────────────────────────────────────────────────────────────
 
 def get_models() -> list[dict]:
-    """Return only models visible to end users."""
-    return [m for m in _load() if m.get("visibleToUsers", True)]
+    """Return only models visible to end users (routing fields stripped)."""
+    public_fields = {
+        "id", "displayName", "slug", "description", "provider", "category",
+        "status", "size", "vram", "isDefault", "usageCount", "lastUsed",
+        "addedAt", "version", "installed",
+        # expose sourceKind so the UI can show an 'offline' badge
+        "sourceKind",
+    }
+    return [
+        {k: v for k, v in m.items() if k in public_fields}
+        for m in _load()
+        if m.get("visibleToUsers", True)
+    ]
 
 
 def get_model(model_id: str) -> dict:
-    model = next((m for m in _load() if m["id"] == model_id), None)
+    """Public model detail (routing fields stripped)."""
+    model = get_model_record(model_id)
     if not model:
         raise HTTPException(status_code=404, detail="Model not found")
-    return model
+    public_fields = {
+        "id", "displayName", "slug", "description", "provider", "category",
+        "status", "size", "vram", "isDefault", "usageCount", "lastUsed",
+        "addedAt", "version", "installed", "sourceKind",
+    }
+    return {k: v for k, v in model.items() if k in public_fields}
+
+
+def get_model_record(model_id: str) -> dict | None:
+    """Full model record including routing fields — used internally by generation_service."""
+    return next((m for m in _load() if m["id"] == model_id), None)
 
 
 def install_model(model_id: str) -> dict:
@@ -126,7 +208,6 @@ def admin_update_model(model_id: str, updates: dict) -> dict:
     if not model:
         raise HTTPException(status_code=404, detail="Model not found")
 
-    # If setting as default, clear other defaults first
     if updates.get("isDefault"):
         for m in models:
             m["isDefault"] = False
@@ -141,8 +222,7 @@ def admin_update_model(model_id: str, updates: dict) -> dict:
 
 def admin_set_default_model(model_id: str) -> list[dict]:
     models = _load()
-    found = any(m["id"] == model_id for m in models)
-    if not found:
+    if not any(m["id"] == model_id for m in models):
         raise HTTPException(status_code=404, detail="Model not found")
     for m in models:
         m["isDefault"] = m["id"] == model_id
@@ -160,15 +240,10 @@ def admin_remove_model(model_id: str) -> None:
 
 def admin_add_model_source(source: dict) -> dict:
     """Register a new model source and persist it."""
-    import re
-    from datetime import datetime, timezone
-
     models = _load()
 
-    # Derive a slug / id from displayName
     slug = re.sub(r"[^a-z0-9]+", "-", source["displayName"].lower()).strip("-")
     model_id = slug
-    # Ensure uniqueness
     existing_ids = {m["id"] for m in models}
     suffix = 1
     while model_id in existing_ids:
@@ -177,11 +252,14 @@ def admin_add_model_source(source: dict) -> dict:
 
     kind = source.get("kind", "api")
     if kind == "huggingface":
-        provider = f"Hugging Face · {source.get('hfRepo', '').split('/')[0] or 'HF'}"
+        provider = f"Hugging Face · {(source.get('hfRepo') or '').split('/')[0] or 'HF'}"
     elif kind == "local":
-        provider = "Local · Custom"
+        provider = "Local · ComfyUI"
+    elif kind == "ollama":
+        provider = "Local · Ollama"
+    elif kind == "openai":
+        provider = "OpenAI"
     else:
-        # Derive provider from baseUrl hostname if available
         base_url = source.get("baseUrl", "")
         try:
             from urllib.parse import urlparse
@@ -191,27 +269,27 @@ def admin_add_model_source(source: dict) -> dict:
             provider = "API"
 
     new_model: dict = {
-        "id": model_id,
-        "displayName": source["displayName"],
-        "slug": slug,
-        "description": source.get("description") or "",
-        "provider": provider,
-        "category": "text-to-image",
-        "status": "active",
-        "size": "Unknown",
-        "vram": source.get("vram", 8),
+        "id":             model_id,
+        "displayName":    source["displayName"],
+        "slug":           slug,
+        "description":    source.get("description") or "",
+        "provider":       provider,
+        "category":       "text-to-image",
+        "status":         "active",
+        "size":           "Unknown",
+        "vram":           source.get("vram", 8),
         "visibleToUsers": True,
-        "isDefault": False,
-        "usageCount": 0,
-        "lastUsed": None,
-        "addedAt": datetime.now(timezone.utc).isoformat(),
-        "version": "1.0",
-        "installed": True,
-        # Source-specific metadata (not exposed to users)
-        "sourceKind": kind,
-        "baseUrl": source.get("baseUrl", ""),
-        "modelId": source.get("modelId", ""),
-        "hfRepo": source.get("hfRepo", ""),
+        "isDefault":      False,
+        "usageCount":     0,
+        "lastUsed":       None,
+        "addedAt":        datetime.now(timezone.utc).isoformat(),
+        "version":        "1.0",
+        "installed":      True,
+        # routing fields
+        "sourceKind":     kind,
+        "baseUrl":        source.get("baseUrl", ""),
+        "modelId":        source.get("modelId", ""),
+        "hfRepo":         source.get("hfRepo", ""),
     }
 
     models.append(new_model)
@@ -220,14 +298,13 @@ def admin_add_model_source(source: dict) -> dict:
 
 
 def increment_usage(model_id: str) -> None:
-    """Called after a successful generation to track usage count."""
+    """Best-effort usage counter update."""
     try:
         models = _load()
-        from datetime import datetime
         for m in models:
             if m["id"] == model_id:
                 m["usageCount"] = m.get("usageCount", 0) + 1
                 m["lastUsed"] = datetime.now().isoformat()
         _save(models)
     except Exception:
-        pass  # usage tracking is best-effort
+        pass

@@ -44,10 +44,15 @@ class AdminModelUpdate(BaseModel):
     status:         Optional[Literal["active", "installing", "disabled", "error", "not-installed"]] = None
     visibleToUsers: Optional[bool] = None
     isDefault:      Optional[bool] = None
+    # routing fields — editable from the admin panel
+    sourceKind:     Optional[Literal["api", "local", "ollama", "huggingface", "openai"]] = None
+    baseUrl:        Optional[str] = None
+    modelId:        Optional[str] = None
+    hfRepo:         Optional[str] = None
 
 
 class NewModelSource(BaseModel):
-    kind:        Literal["api", "local", "huggingface"]
+    kind:        Literal["api", "local", "ollama", "huggingface", "openai"]
     displayName: str
     description: str = ""
     baseUrl:     str = ""
