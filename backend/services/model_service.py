@@ -143,7 +143,7 @@ def _save(models: list[dict]) -> None:
 def get_models() -> list[dict]:
     """Return only models visible to end users (routing fields stripped)."""
     public_fields = {
-        "id", "displayName", "slug", "description", "provider", "category",
+        "id", "displayName", "slug","performance", "description", "provider", "category",
         "status", "size", "vram", "isDefault", "usageCount", "lastUsed",
         "addedAt", "version", "installed",
         # expose sourceKind so the UI can show an 'offline' badge

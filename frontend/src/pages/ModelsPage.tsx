@@ -136,6 +136,7 @@ export const ModelsPage = () => {
 
       const data =
         await apiClient.getModels();
+        console.log('API RESPONSE:', data);
 
       setModels(data);
     } catch (err) {

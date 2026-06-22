@@ -94,27 +94,5 @@
     "baseUrl": "",
     "modelId": "nova-canvas",
     "hfRepo": ""
-  },
-  {
-    "id": "sgs",
-    "displayName": "sgs",
-    "slug": "sgs",
-    "description": "test",
-    "provider": "Gen",
-    "category": "text-to-image",
-    "status": "active",
-    "size": "Unknown",
-    "vram": 8,
-    "visibleToUsers": true,
-    "isDefault": false,
-    "usageCount": 0,
-    "lastUsed": null,
-    "addedAt": "2026-06-18T12:19:57.701331+00:00",
-    "version": "1.0",
-    "installed": true,
-    "sourceKind": "api",
-    "baseUrl": "https://gen.pollinations.ai/v1",
-    "modelId": "asa",
-    "hfRepo": ""
   }
 ]
